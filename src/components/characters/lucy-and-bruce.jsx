@@ -1,4 +1,4 @@
-import LucyAndBruceGraphic from "./../../images/Lucy-And-Bruce.svg"
+import LucyAndBruceGraphic from "./../../images/lucy-and-bruce.svg"
 import PropTypes from "prop-types"
 import React from "react"
 import styles from "./lucy-and-bruce.module.scss"

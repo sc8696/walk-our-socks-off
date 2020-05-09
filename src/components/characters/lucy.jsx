@@ -1,4 +1,4 @@
-import LucyGraphic from "./../../images/Lucy.svg"
+import LucyGraphic from "./../../images/lucy.svg"
 import PropTypes from "prop-types"
 import React from "react"
 import styles from "./character.module.scss";

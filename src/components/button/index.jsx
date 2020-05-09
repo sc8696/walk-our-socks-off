@@ -11,12 +11,15 @@ const Button = ({
   className,
   buttonType = "secondary",
   link = null,
+  title = null,
   ...otherProps
 }) => {
   if (link) {
     return (
       <a
         href={link}
+        title={title}
+        target="_"
         className={classnames("button", classMap[buttonType], className)}
         {...otherProps}
       >
@@ -27,6 +30,7 @@ const Button = ({
   return (
     <button
       className={classnames(classMap[buttonType], className)}
+      title={title}
       {...otherProps}
     >
       {children}
@@ -39,6 +43,7 @@ Button.propTypes = {
   className: PropTypes.string,
   buttonType: PropTypes.oneOf(["primary", "secondary"]),
   link: PropTypes.string,
+  title: PropTypes.string
 }
 
 export default Button

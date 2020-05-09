@@ -1,20 +1,17 @@
 import Bruce from "../../components/characters/bruce"
+import Link from "../../components/link"
 import { Links } from "../../config/config"
 import React from "react"
 import Region from "../../components/region"
-import styles from "./progress.module.scss"
+import styles from "./guide-dogs.module.scss"
 
 const GuideDogs = () => {
   return (
     <Region className={styles.guideDogs}>
-      <Bruce className={styles.bruce} />
+      <Bruce className={styles.bruce} withLead={false} />
       <header>
         <h2 className={"unemph"}>
-          The{" "}
-          <span className={"emph"}>
-            life-changing
-          </span>{" "}
-          work of Guide Dogs
+          The <span className={"emph"}>life-changing</span> work of Guide Dogs
         </h2>
       </header>
 
@@ -38,9 +35,13 @@ const GuideDogs = () => {
         </li>
       </ul>
 
-      <a className={styles.link} href={Links.guideDogLink}>
+      <Link
+        className={styles.link}
+        href={Links.guideDogServices.link}
+        title={Links.guideDogServices.title}
+      >
         More about the life-changing services provided by guide dogs
-      </a>
+      </Link>
     </Region>
   )
 }

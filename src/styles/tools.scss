@@ -12,8 +12,8 @@
   @return cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@function animate($animation-name, $delay: 0ms) {
-  @return $animation-name ease() 666ms $delay both;
+@function animate($animation-name, $speed: 666ms, $delay: 0ms, $repeat: 1, $direction: alternate) {
+  @return $animation-name ease() $speed $delay both $repeat $direction;
 }
 
 @mixin mobile-narrow {

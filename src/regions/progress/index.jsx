@@ -1,25 +1,45 @@
+import React, { useContext, useState } from "react"
+
+import { ProgressContext } from "./../../contexts/progress.provider"
 import ProgressMeter from "../../components/progress-meter"
-import React from "react"
 import Region from "../../components/region"
-import characterList from "../../consts/character-list"
+import VisibilitySensor from "react-visibility-sensor"
 import styles from "./progress.module.scss"
 
 const Progress = () => {
+  const [isVisible, setIsVisible] = useState(false)
+  const { progress } = useContext(ProgressContext) || {}
+
+  const isLoaded =
+    progress.sarah.timeline.length + progress.lucy.timeline.length > 0
+
   return (
     <Region className={styles.progress}>
       <header className={styles.heading}>
         <h2>Our progress</h2>
       </header>
-      {characterList.map((character, index) => (
-        <ProgressMeter
-          key={index}
-          name={character.name}
-          colour={character.colour}
-          steps={character.steps}
-          distanceTravelled={character.distanceTravelled}
-          distanceToTravel={character.distanceToTravel}
-        ></ProgressMeter>
-      ))}
+      <VisibilitySensor
+        active={!isVisible}
+        onChange={v => setIsVisible(v)}
+        minTopValue={200}
+        partialVisibility
+      >
+        <div className={styles.meters}>
+          {Object.values(progress).map((character, index) => (
+            <ProgressMeter
+              key={index}
+              name={character.name}
+              icon={character.avatar}
+              colour={character.colour}
+              steps={character.totalSteps}
+              distanceTravelled={character.distanceTravelled}
+              distanceToTravel={character.distanceToTravel}
+              descriptionText={`${character.name} has walked ${character.totalSteps} steps, and a total of ${character.distanceTravelled} kilometers. She has ${character.distanceToTravel} kilometers to go`}
+              isLoaded={isLoaded && isVisible}
+            ></ProgressMeter>
+          ))}
+        </div>
+      </VisibilitySensor>
     </Region>
   )
 }

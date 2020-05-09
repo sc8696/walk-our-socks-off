@@ -8,8 +8,10 @@ const Support = () => {
   return (
     <Region className={styles.support}>
       <header className={styles.heading}>
-        <h2 className={styles.title}>Support us</h2>
-        <aside>
+        <h2 className={styles.title} aria-label={"Support us, only if you can"}>
+          Support us
+        </h2>
+        <aside aria-hidden={"true"}>
           <em className={"emph"}>Only if</em> you can
         </aside>
       </header>
@@ -26,8 +28,10 @@ const Support = () => {
         their life-changing work.
       </p>
       <footer className={styles.buttonGroup}>
-        <Button link={Links.donateLink} buttonType="primary">Donate</Button>
-        <Button link={Links.cheerUsOnLink}>Cheer us on!</Button>
+        <Button link={Links.donate.link} title={Links.donate.title} buttonType="primary">
+          Donate
+        </Button>
+        {/* <Button link={Links.cheerUsOnLink}>Cheer us on!</Button> */}
       </footer>
     </Region>
   )

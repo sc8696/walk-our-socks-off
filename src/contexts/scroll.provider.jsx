@@ -22,12 +22,12 @@ export const ScrollProvider = ({ children }) => {
       )
     }, 200),
     [setScrollPosition]
-  )
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  })
+  });
 
   return (
     <ScrollContext.Provider value={{ scrollPosition }}>

@@ -7,8 +7,15 @@
 }
 
 .bruce {
-  margin-top: spacing(-11);
+  margin-top: spacing(-13);
   margin-bottom: spacing(2);
+
+  perspective: 1000px;
+
+  [class="tail"] {
+    transform-origin: 189px 86px;
+    animation: animate(tail-wag, $speed: 1000ms, $repeat: infinite, $direction: alternate);
+  }
 }
 
 .information {
@@ -28,7 +35,7 @@
       left: 0;
       width: spacing(2);
       height: 100%;
-      background-image: url("./../../images/pawprint.svg");
+      background-image: url("./../../icons/paw.svg");
       background-size: contain;
       background-repeat: no-repeat;
       content: "";
@@ -50,5 +57,17 @@
 
   .bruce {
     transform: scale(0.8);
+  }
+}
+
+@keyframes tail-wag {
+  0% {
+    transform: rotateX(10deg) rotateY(25deg);
+  }
+  50% {
+    transform: rotateX(15deg) rotateY(-25deg);
+  }
+  100% {
+    transform: rotateX(10deg) rotateY(25deg);
   }
 }

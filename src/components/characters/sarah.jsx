@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import SarahGraphic from "./../../images/Sarah.svg"
+import SarahGraphic from "./../../images/sarah.svg"
 import styles from "./sarah.module.scss"
 
 const Sarah = ({ className = "" }) => {

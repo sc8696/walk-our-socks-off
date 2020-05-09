@@ -2,10 +2,15 @@
 @import "./../../styles/palette.scss";
 @import "./../../styles/variables.scss";
 
+.progress {
+  padding-top: spacing(2);
+  background-color: $background-secondary;
+}
 .heading {
   @include screen-reader-only();
 }
 
-.progress {
+.meters {
   max-width: $max-content-width-narrow;
+  width: 100%;
 }

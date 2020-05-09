@@ -1,5 +1,6 @@
 import Button from "../../components/button"
 import Floor from "../../components/floor/floor"
+import Link from "../../components/link"
 import { Links } from "../../config/config"
 import LucyAndBruce from "../../components/characters/lucy-and-bruce"
 import React from "react"
@@ -18,16 +19,15 @@ const Hero = () => {
         This May, since we can&rsquo;t visit each other, we&rsquo;re each going
         to walk the 250 kilometres between us (whilst observing the COVID-19
         pandemic guidelines) in support of Guide Dogs{" "}
-        <a href={Links.challengeLink} title="Donate to the Guide Dogs trust">
+        <Link href={Links.challenge.link} title={Links.challenge.title}>
           walk your socks off challenge
-        </a>
+        </Link>
       </p>
       <div role="button" className={styles.donateButtonContainer}>
         <Button
-          aria-label="Donate to the Guide Dogs Trust"
-          title="Donate to the Guide Dogs trust"
+          title={Links.donate.title}
           buttonType="primary"
-          link={Links.donateLink}
+          link={Links.donate.link}
         >
           Donate
         </Button>

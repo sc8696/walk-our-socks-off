@@ -27,11 +27,13 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
+    "g-sheets-api": "^1.2.0",
     "gatsby-plugin-react-svg": "^3.0.0",
     "mapbox-gl": "^1.10.0",
     "prettier": "2.0.5",
     "rc-progress": "^2.5.3",
     "react-mapbox-gl": "^4.8.3",
+    "react-visibility-sensor": "^5.1.1",
     "sass-variable-loader": "^0.1.2"
   },
   "keywords": [
