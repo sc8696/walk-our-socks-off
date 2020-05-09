@@ -1,9 +1,9 @@
+import Button from "../../components/button"
 import Floor from "../../components/floor/floor"
 import LucyAndBruce from "../../components/characters/lucy-and-bruce"
 import React from "react"
 import Region from "../../components/region"
 import Sarah from "../../components/characters/sarah"
-import classnames from "classnames"
 import styles from "./hero.module.scss"
 
 const Hero = () => {
@@ -22,13 +22,14 @@ const Hero = () => {
         </a>
       </p>
       <div role="button" className={styles.donateButtonContainer}>
-        <button
+        <Button
           aria-label="Donate to the Guide Dogs Trust"
           title="Donate to the Guide Dogs trust"
-          className={classnames(styles.donateButton, "button-primary")}
+          buttonType="primary"
+          link="lol"
         >
           Donate
-        </button>
+        </Button>
       </div>
       {/* <Characters className={styles.charactersDesktop} /> */}
       <div

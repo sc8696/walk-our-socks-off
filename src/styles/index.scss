@@ -13,3 +13,10 @@ html {
 body {
   //   min-width: 480px;
 }
+
+button,
+a {
+  &:focus {
+    outline: 2px solid orange;
+  }
+}

@@ -24,7 +24,9 @@
   animation: animate(cascade, $delay: 66ms);
 }
 
-.donateButton {
+.donateButtonContainer {
+  position: relative;
+  z-index: 2;
   animation: animate(cascade, $delay: 666ms);
 }
 

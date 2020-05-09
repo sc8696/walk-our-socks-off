@@ -34,7 +34,7 @@
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  button + button {
+  a + a {
     margin-left: spacing();
   }
 }
@@ -58,7 +58,7 @@
     flex-direction: column;
     width: 100%;
 
-    button + button {
+    a + a {
       margin-left: 0;
     }
   }
