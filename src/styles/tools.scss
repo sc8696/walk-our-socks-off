@@ -1,0 +1,49 @@
+@import "./variables.scss";
+
+@function spacing($factor: 1) {
+  @return $base-unit * $factor;
+}
+
+@function font-size($size: 1) {
+  @return nth($font-sizes, $size);
+}
+
+@function ease() {
+  @return cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@function animate($animation-name, $delay: 0ms) {
+  @return $animation-name ease() 666ms $delay both;
+}
+
+@mixin mobile-narrow {
+  @media (max-width: 374px) {
+    @content;
+  }
+}
+
+@mixin mobile-horizontal {
+  @media (max-height: 720px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 720px) {
+    @content;
+  }
+}
+
+@mixin vertical {
+  @media (orientation: vertical) {
+    @content;
+  }
+}
+
+@mixin screen-reader-only {
+  position: absolute;
+  top: -5000px;
+  left: -5000px;
+  font-size: 0;
+  opacity: 0;
+}

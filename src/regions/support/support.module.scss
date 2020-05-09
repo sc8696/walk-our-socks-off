@@ -1,0 +1,65 @@
+@import "./../../styles/tools.scss";
+@import "./../../styles/palette.scss";
+@import "./../../styles/typography.module.scss";
+
+.support {
+  max-width: $max-content-width-narrow/1.5;
+  text-align: left;
+}
+
+.heading {
+  margin-bottom: spacing(2);
+  max-width: $max-content-width-narrow;
+  width: 100%;
+  text-transform: uppercase;
+  .title {
+    @extend h1;
+    margin-bottom: spacing(1);
+    color: $accent-1;
+    text-align: le
+    ft;
+    white-space: nowrap;
+  }
+
+  aside {
+    @extend h2;
+    white-space: nowrap;
+    * {
+      font-style: normal;
+    }
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  button + button {
+    margin-left: spacing();
+  }
+}
+
+@include mobile {
+  .heading {
+    .title,
+    aside {
+      text-indent: 0;
+      font-size: calc(1rem + 5vw);
+    }
+
+    aside {
+      font-size: calc(1rem + 4vw);
+    }
+  }
+}
+
+@include mobile-narrow {
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
+
+    button + button {
+      margin-left: 0;
+    }
+  }
+}

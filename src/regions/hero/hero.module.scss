@@ -1,0 +1,146 @@
+@import "./../../styles/tools.scss";
+
+.hero {
+  position: relative;
+  padding-top: spacing(8);
+  padding-bottom: spacing(2);
+  min-height: 700px;
+  max-height: 900px;
+  height: calc(100vh - #{spacing(4)});
+}
+
+.header {
+  h1 {
+    margin: 0 auto;
+    margin-bottom: spacing(1);
+    animation: animate(cascade);
+  }
+}
+.information {
+  margin: 0 auto;
+  margin-bottom: spacing(2);
+  padding: 0 spacing(1);
+  max-width: $max-content-width-narrow;
+  animation: animate(cascade, $delay: 66ms);
+}
+
+.donateButton {
+  animation: animate(cascade, $delay: 666ms);
+}
+
+.characterScene {
+  position: relative;
+  z-index: 1;
+  // display: flex;
+  // justify-content: space-between;
+  margin: 0 auto;
+  max-width: $max-content-width-narrow;
+  width: 100%;
+  height: 360px;
+}
+
+.sarah,
+.lucyAndBruce {
+  position: absolute;
+  bottom: 0;
+  width: 55%;
+}
+
+.sarah {
+  left: 0;
+  min-width: 300px;
+  transform-origin: 0 50%;
+}
+
+.lucyAndBruce {
+  right: 0;
+  min-width: 300px;
+  transform-origin: 100% 50%;
+}
+
+.floor {
+  height: calc(100% - #{spacing(40)});
+}
+
+@include mobile-horizontal {
+  .hero {
+    padding-top: spacing(2);
+  }
+  .floor {
+    height: calc(100% - #{spacing(35)});
+  }
+}
+
+@include mobile {
+  .hero {
+    padding-top: spacing(3);
+    padding-bottom: spacing(4);
+    min-height: unset;
+    max-height: unset;
+    height: auto;
+  }
+
+  .header {
+    align-self: flex-start;
+    h1 {
+      margin: 0;
+      min-width: 270px;
+      width: 66.6%;
+      text-align: left;
+    }
+  }
+
+  .information {
+    align-self: flex-end;
+    order: 1;
+    margin: 0;
+    margin-bottom: spacing(4);
+    padding: 0 0 0 spacing(4);
+    min-width: 330px;
+    width: 66.6%;
+    text-align: left;
+    text-align: right;
+  }
+
+  .donateButtonContainer {
+    order: 2;
+  }
+
+  .characterScene {
+    height: 330px;
+  }
+
+  .sarah,
+  .lucyAndBruce {
+  }
+
+  .lucyAndBruce {
+    // right: auto;
+    transform: translateY(-50px) translateX(50px);
+  }
+
+  .sarah {
+    transform: translateY(260px) translateX(-90px);
+  }
+
+  .floor {
+    height: calc(100% - #{spacing(28)});
+  }
+}
+
+@include mobile-narrow {
+  .sarah {
+    visibility: hidden;
+  }
+}
+
+@keyframes cascade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

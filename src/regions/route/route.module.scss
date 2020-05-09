@@ -1,0 +1,38 @@
+@import "./../../styles/tools.scss";
+@import "./../../styles/palette.scss";
+
+.route {
+  padding-top: spacing(0);
+}
+
+.heading {
+  // margin-top: spacing(-6);
+}
+
+.route {
+  position: relative;
+  z-index: 1;
+  background-color: $background-secondary;
+}
+
+.mapContainer {
+  margin: 0 spacing(2);
+  max-width: 1440px;
+  width: 100%;
+  height: 600px;
+  border: 10px solid white;
+  box-shadow: -2px 1px 6px -2px rgba(0,0,0,0.5);
+}
+
+@include mobile {
+  .heading {
+    margin-top: 0;
+  }
+  .mapContainer {
+    width: calc(100% + #{spacing(4)});
+    height: 300px;
+    border-right: 0;
+    border-left: 0;
+    // box-shadow: none;
+  }
+}

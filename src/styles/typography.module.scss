@@ -1,0 +1,11 @@
+@import "./tools.scss";
+@import "./variables.scss";
+
+@for $i from 1 through length($headings) {
+  #{nth($headings, $i)} {
+    margin-bottom: spacing(3);
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: $max-heading-size - 0.6 * ($i - 1);
+  }
+}

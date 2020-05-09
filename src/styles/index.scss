@@ -1,0 +1,15 @@
+@import "./normalize.css";
+@import "./skeleton.scss";
+
+@import "./typography.scss";
+
+body,
+html {
+  overflow-x: hidden;
+  min-width: 320px;
+  width: 100%;
+}
+
+body {
+  //   min-width: 480px;
+}

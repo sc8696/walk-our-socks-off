@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;800&display=swap");
+@import "./palette.scss";
+@import "./tools.scss";
+@import "./variables.scss";
+
+@include mobile {
+  @for $i from 1 through length($headings) {
+    #{nth($headings, $i)} {
+      font-size: $max-heading-size - 0.6 * $i;
+    }
+  }
+}
+* {
+  font-family: "Avenir Next", "Nunito Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: spacing(3);
+  color: $primary;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+@for $i from 1 through length($headings) {
+  #{nth($headings, $i)} {
+    font-size: $max-heading-size - 0.6 * ($i - 1);
+  }
+}
+
+p {
+  color: $body-text;
+}
+
+.unemph {
+  font-weight: 400;
+}
+
+.emph {
+  font-weight: 700;
+}

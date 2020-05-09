@@ -1,0 +1,11 @@
+@import "./../../styles/tools.scss";
+@import "./../../styles/palette.scss";
+@import "./../../styles/variables.scss";
+
+.heading {
+  @include screen-reader-only();
+}
+
+.progress {
+  max-width: $max-content-width-narrow;
+}

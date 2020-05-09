@@ -1,0 +1,17 @@
+@import "./../../styles/tools.scss";
+@import "./character.module.scss";
+.sarah {
+  @extend .character;
+  animation: animate(fade-in-from-left, $delay: 500ms);
+}
+
+@keyframes fade-in-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-33px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

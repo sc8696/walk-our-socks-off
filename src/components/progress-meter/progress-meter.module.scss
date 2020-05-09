@@ -1,0 +1,52 @@
+@import "./../../styles/tools.scss";
+@import "./../../styles/typography.module.scss";
+
+.progressMeter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.heading {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: spacing(2);
+  width: 100%;
+  text-align: left;
+}
+
+.progressTitle {
+  @extend h3;
+  margin-bottom: 0;
+}
+
+.progressBar {
+  margin-bottom: spacing(2);
+}
+
+.stats {
+  width: 100%;
+  dl {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    > div {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    dt,
+    dd {
+      margin: 0;
+    }
+
+    dt {
+      font-size: font-sizes(2);
+    }
+
+    dd {
+      @extend h2;
+      margin-bottom: spacing(1);
+    }
+  }
+}

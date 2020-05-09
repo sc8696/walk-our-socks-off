@@ -1,0 +1,39 @@
+@import "./../../styles/tools.scss";
+@import "./../../styles/palette.scss";
+@import "./../../styles/typography.module.scss";
+
+.footer {
+  background-color: $background-penternary;
+  text-align: center;
+  font-size: font-size(1) * 0.8;
+  line-height: 1.2;
+}
+
+.heading {
+  @include screen-reader-only();
+}
+
+.charityInfo {
+  font-style: normal;
+}
+
+.credit {
+  .creditTitle {
+    margin-bottom: spacing(1.5);
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: font-size(1) * 0.8;
+  }
+  > *:not(.creditTitle) {
+    display: block;
+    margin-bottom: spacing(1.5);
+    color: $body-text-secondary;
+    a {
+      color: inherit;
+    }
+  }
+
+  & + .credit {
+    margin-top: spacing(2);
+  }
+}

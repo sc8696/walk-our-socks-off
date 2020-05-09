@@ -1,0 +1,29 @@
+@import "./../../styles/tools.scss";
+
+.lucyAndBruce {
+  position: relative;
+  display: flex;
+  width: 100%;
+  [class="bruce"] {
+    position: relative;
+    top: 140px;
+    left: 70px;
+    animation: animate(fade-in-from-right, $delay: 500ms);
+  }
+  [class="lucy"] {
+    position: relative;
+    z-index: 1;
+    animation: animate(fade-in-from-right, $delay: 566ms);
+  }
+}
+
+@keyframes fade-in-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
