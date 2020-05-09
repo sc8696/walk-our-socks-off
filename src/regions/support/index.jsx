@@ -1,5 +1,5 @@
 import Button from "../../components/button"
-import { Links } from "../../consts/config"
+import { Links } from "../../config/config"
 import React from "react"
 import Region from "../../components/region"
 import styles from "./support.module.scss"

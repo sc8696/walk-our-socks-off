@@ -1,6 +1,6 @@
 import Button from "../../components/button"
 import Floor from "../../components/floor/floor"
-import { Links } from "../../consts/config"
+import { Links } from "../../config/config"
 import LucyAndBruce from "../../components/characters/lucy-and-bruce"
 import React from "react"
 import Region from "../../components/region"

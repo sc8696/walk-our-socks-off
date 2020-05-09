@@ -1,4 +1,4 @@
-import { Credits, Links } from "./../../consts/config";
+import { Credits, Links } from "../../config/config";
 
 import React from "react"
 import Region from "../../components/region"
