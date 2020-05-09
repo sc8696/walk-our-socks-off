@@ -1,4 +1,5 @@
 import Bruce from "../../components/characters/bruce"
+import { Links } from "../../consts/config"
 import React from "react"
 import Region from "../../components/region"
 import styles from "./progress.module.scss"
@@ -37,7 +38,7 @@ const GuideDogs = () => {
         </li>
       </ul>
 
-      <a className={styles.link} href="lol">
+      <a className={styles.link} href={Links.guideDogLink}>
         More about the life-changing services provided by guide dogs
       </a>
     </Region>

@@ -1,5 +1,6 @@
 import Button from "../../components/button"
 import Floor from "../../components/floor/floor"
+import { Links } from "../../consts/config"
 import LucyAndBruce from "../../components/characters/lucy-and-bruce"
 import React from "react"
 import Region from "../../components/region"
@@ -17,7 +18,7 @@ const Hero = () => {
         This May, since we can&rsquo;t visit each other, we&rsquo;re each going
         to walk the 250 kilometres between us (whilst observing the COVID-19
         pandemic guidelines) in support of Guide Dogs{" "}
-        <a href="lol" title="Donate to the Guide Dogs trust">
+        <a href={Links.challengeLink} title="Donate to the Guide Dogs trust">
           walk your socks off challenge
         </a>
       </p>
@@ -26,7 +27,7 @@ const Hero = () => {
           aria-label="Donate to the Guide Dogs Trust"
           title="Donate to the Guide Dogs trust"
           buttonType="primary"
-          link="lol"
+          link={Links.donateLink}
         >
           Donate
         </Button>

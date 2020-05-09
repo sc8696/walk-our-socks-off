@@ -1,4 +1,5 @@
 import Button from "../../components/button"
+import { Links } from "../../consts/config"
 import React from "react"
 import Region from "../../components/region"
 import styles from "./support.module.scss"
@@ -25,8 +26,8 @@ const Support = () => {
         their life-changing work.
       </p>
       <footer className={styles.buttonGroup}>
-        <Button link="lol" buttonType="primary">Donate</Button>
-        <Button link="lol">Cheer us on!</Button>
+        <Button link={Links.donateLink} buttonType="primary">Donate</Button>
+        <Button link={Links.cheerUsOnLink}>Cheer us on!</Button>
       </footer>
     </Region>
   )

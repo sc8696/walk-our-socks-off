@@ -3,6 +3,7 @@ import "./../styles/index.scss"
 import Footer from "../regions/footer"
 import GuideDogs from "../regions/guide-dogs"
 import Hero from "../regions/hero"
+import How from "../regions/how"
 import Progress from "../regions/progress"
 import React from "react"
 import Route from "../regions/route"
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <Hero />
       <Route />
       <Progress />
+      <How />
       <GuideDogs />
       <Support />
       <Footer />

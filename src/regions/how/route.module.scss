@@ -1,0 +1,60 @@
+@import "./../../styles/tools.scss";
+@import "./../../styles/palette.scss";
+
+.how {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-top: 0;
+  padding-bottom: spacing(10);
+  max-width: $max-content-width;
+}
+
+.heading {
+  flex: 2;
+  max-width: $max-content-width-narrow;
+  text-align: left;
+  .title {
+    font-size: font-size(9);
+  }
+  aside {
+    font-size: font-size(7);
+    font-size: 75%;
+  }
+}
+
+.information {
+  flex: 3;
+  margin-top: spacing(10);
+  padding-left: spacing(2);
+  text-align: left;
+  font-size: font-size(2);
+}
+
+@include mobile {
+  .how {
+    flex-direction: column;
+    padding-bottom: spacing(8);
+  }
+  .heading {
+    flex: 1;
+    margin-bottom: spacing(0);
+    max-width: $max-content-width-narrow;
+    text-align: left;
+    .title {
+      font-size: font-size(9);
+    }
+    aside {
+      font-size: font-size(7);
+      font-size: 75%;
+    }
+  }
+
+  .information {
+    flex: 3;
+    margin-top: spacing(2);
+    padding-left: 0;
+    text-align: left;
+    font-size: font-size(2);
+  }
+}

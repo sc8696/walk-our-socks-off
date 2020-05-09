@@ -1,3 +1,5 @@
+import { Credits, Links } from "./../../consts/config";
+
 import React from "react"
 import Region from "../../components/region"
 import styles from "./footer.module.scss"
@@ -13,7 +15,7 @@ const Footer = () => {
           Created by Sarah McIntyre &amp; Steve Cumming{" "}
         </h3>
         <span>
-          In support of <a href="lol">Gude Dogs for the Blind Association</a>
+          In support of <a href={Links.guideDogLink}>Gude Dogs for the Blind Association</a>
         </span>
         <address className={styles.charityInfo}>
           Charity Registration No. in England and Wales 209617 and Scotland
@@ -25,14 +27,14 @@ const Footer = () => {
         <h3 className={styles.creditTitle}>Illustration credits</h3>
         <p>
           &quot;Sarah&quot; and &quot;Lucy&quot; illustrations are a derivative
-          work of <a href="lol">hummans</a>, by <a href="lol">Pablo Stanley</a>{" "}
-          used under <a href="lol">CCO</a>
+          work of <a href={Credits.hummans.link}>hummans</a>, by <a href={Credits.hummans.authorLink}>Pablo Stanley</a>{" "}
+          used under <a href={Credits.hummans.licenseLink}>CCO</a>
         </p>
         <p>
           &quot;Bruce, the guide dog&quot; illustration is a derivative of{" "}
-          <a href="lol">Infographic vector</a> created by{" "}
-          <a href="lol"> freepik</a> used under{" "}
-          <a href="lol">Freepik license</a>
+          <a href={Credits.freepik.link}>Infographic vector</a> created by{" "}
+          <a href={Credits.freepik.authorLink}> freepik</a> used under{" "}
+          <a href={Credits.freepik.licenseLink}>Freepik license</a>
         </p>
       </section>
     </Region>
