@@ -13,6 +13,7 @@ Walk Our Socks off website - Created with GatsbyJS
 
     ```shell
     cd walking-our-socks-off
+    yarn
     gatsby develop -H 0.0.0.0
     ```
 
