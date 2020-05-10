@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { DrawStuffOnMap } from "./draw";
+import PropTypes from "prop-types";
 import mapboxgl from "mapbox-gl";
 import styles from "./map.module.scss";
 
@@ -27,26 +30,38 @@ const customMapStyle = {
   zoom: 8
 };
 
-const Map = () => {
+const Map = ({ characters }) => {
+  const [mapBox, setMapBox] = useState(null);
   const setupMap = element => {
-    if (element) {
-      new mapboxgl.Map({
+    if (element && !mapBox) {
+      const map = new mapboxgl.Map({
         container: element,
         style: customMapStyle
       });
+      setMapBox(map);
+
+      DrawStuffOnMap(map, characters);
     }
   };
 
   return (
-    <div
-      ref={el => setupMap(el)}
-      className={styles.mapContainer}
-      role="presentation"
-      aria-hidden="true"
-    ></div>
+    <>
+      <link
+        href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css"
+        rel="stylesheet"
+      />
+      <div
+        ref={el => setupMap(el)}
+        className={styles.mapContainer}
+        role="presentation"
+        aria-hidden="true"
+      ></div>
+    </>
   );
 };
 
-Map.propTypes = {};
+Map.propTypes = {
+  characters: PropTypes.object
+};
 
 export default Map;

@@ -1,9 +1,13 @@
+import React, { useContext } from "react";
+
 import Map from "../../components/map";
-import React from "react";
+import { ProgressContext } from "../../contexts/progress.provider";
 import Region from "../../components/region";
 import styles from "./route.module.scss";
 
 const Route = () => {
+  const { progress } = useContext(ProgressContext) || {};
+
   return (
     <Region className={styles.route}>
       <header className={styles.heading}>
@@ -12,7 +16,7 @@ const Route = () => {
         </h2>
       </header>
       <figure className={styles.mapContainer}>
-        <Map />
+        <Map characters={progress} />
       </figure>
     </Region>
   );

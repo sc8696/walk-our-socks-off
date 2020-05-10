@@ -16,7 +16,7 @@ const IndexPage = () => {
     <ProgressProvider>
       <>
         <Hero />
-        {/* <Route /> */}
+        <Route />
         <Progress />
         <How />
         <GuideDogs />
