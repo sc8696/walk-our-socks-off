@@ -1,9 +1,9 @@
-import React from "react"
-import mapboxgl from "mapbox-gl"
-import styles from "./map.module.scss"
+import React from "react";
+import mapboxgl from "mapbox-gl";
+import styles from "./map.module.scss";
 
 const tileServer =
-  "https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg"
+  "https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg";
 
 const customMapStyle = {
   version: 8,
@@ -11,8 +11,8 @@ const customMapStyle = {
     "raster-tiles": {
       type: "raster",
       tiles: [tileServer],
-      tileSize: 256,
-    },
+      tileSize: 256
+    }
   },
   layers: [
     {
@@ -20,22 +20,22 @@ const customMapStyle = {
       type: "raster",
       source: "raster-tiles",
       minzoom: 0,
-      maxzoom: 22,
-    },
+      maxzoom: 22
+    }
   ],
   center: [-0.389284868409795, 51.96030424936522],
   zoom: 8
-}
+};
 
 const Map = () => {
   const setupMap = element => {
-    if(element){
+    if (element) {
       new mapboxgl.Map({
         container: element,
-        style: customMapStyle,
+        style: customMapStyle
       });
     }
-  }
+  };
 
   return (
     <div
@@ -43,11 +43,10 @@ const Map = () => {
       className={styles.mapContainer}
       role="presentation"
       aria-hidden="true"
-    >
-    </div>
-  )
-}
+    ></div>
+  );
+};
 
-Map.propTypes = {}
+Map.propTypes = {};
 
-export default Map
+export default Map;

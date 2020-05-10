@@ -1,7 +1,7 @@
-import LucyAndBruceGraphic from "./../../images/lucy-and-bruce.svg"
-import PropTypes from "prop-types"
-import React from "react"
-import styles from "./lucy-and-bruce.module.scss"
+import LucyAndBruceGraphic from "./../../images/lucy-and-bruce.svg";
+import PropTypes from "prop-types";
+import React from "react";
+import styles from "./lucy-and-bruce.module.scss";
 
 const LucyAndBruce = ({ className }) => {
   return (
@@ -13,11 +13,11 @@ const LucyAndBruce = ({ className }) => {
         className={styles.lucyAndBruce}
       />
     </div>
-  )
-}
+  );
+};
 
 LucyAndBruce.propTypes = {
-  className: PropTypes.string,
-}
+  className: PropTypes.string
+};
 
-export default LucyAndBruce
+export default LucyAndBruce;

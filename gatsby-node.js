@@ -12,10 +12,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         rules: [
           {
             test: /mapbox-gl/,
-            use: loaders.null(),
+            use: loaders.null()
           }
-        ],
-      },
-    })
+        ]
+      }
+    });
   }
-}
+};

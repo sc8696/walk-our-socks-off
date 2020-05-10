@@ -1,12 +1,12 @@
-import Button from "../../components/button"
-import Floor from "../../components/floor/floor"
-import Link from "../../components/link"
-import { Links } from "../../config/config"
-import LucyAndBruce from "../../components/characters/lucy-and-bruce"
-import React from "react"
-import Region from "../../components/region"
-import Sarah from "../../components/characters/sarah"
-import styles from "./hero.module.scss"
+import Button from "../../components/button";
+import Floor from "../../components/floor/floor";
+import Link from "../../components/link";
+import { Links } from "../../config/config";
+import LucyAndBruce from "../../components/characters/lucy-and-bruce";
+import React from "react";
+import Region from "../../components/region";
+import Sarah from "../../components/characters/sarah";
+import styles from "./hero.module.scss";
 
 const Hero = () => {
   return (
@@ -41,9 +41,9 @@ const Hero = () => {
         <LucyAndBruce className={styles.lucyAndBruce} />
       </div>
     </Region>
-  )
-}
+  );
+};
 
-Hero.propTypes = {}
+Hero.propTypes = {};
 
-export default Hero
+export default Hero;

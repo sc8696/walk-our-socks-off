@@ -1,17 +1,17 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useState } from "react";
 
-import { ProgressContext } from "./../../contexts/progress.provider"
-import ProgressMeter from "../../components/progress-meter"
-import Region from "../../components/region"
-import VisibilitySensor from "react-visibility-sensor"
-import styles from "./progress.module.scss"
+import { ProgressContext } from "./../../contexts/progress.provider";
+import ProgressMeter from "../../components/progress-meter";
+import Region from "../../components/region";
+import VisibilitySensor from "react-visibility-sensor";
+import styles from "./progress.module.scss";
 
 const Progress = () => {
-  const [isVisible, setIsVisible] = useState(false)
-  const { progress } = useContext(ProgressContext) || {}
+  const [isVisible, setIsVisible] = useState(false);
+  const { progress } = useContext(ProgressContext) || {};
 
   const isLoaded =
-    progress?.sarah?.timeline.length + progress?.lucy?.timeline?.length > 0
+    progress?.sarah?.timeline.length + progress?.lucy?.timeline?.length > 0;
 
   return (
     <Region className={styles.progress}>
@@ -25,25 +25,28 @@ const Progress = () => {
         partialVisibility
       >
         <div className={styles.meters}>
-          {Object.values(progress).map((character, index) => (
-            <ProgressMeter
-              key={index}
-              name={character.name}
-              icon={character.avatar}
-              colour={character.colour}
-              steps={character.totalSteps}
-              distanceTravelled={character.distanceTravelled}
-              distanceToTravel={character.distanceToTravel}
-              descriptionText={`${character.name} has walked ${character.totalSteps} steps, and a total of ${character.distanceTravelled} kilometers. She has ${character.distanceToTravel} kilometers to go`}
-              isLoaded={isLoaded && isVisible}
-            ></ProgressMeter>
-          ))}
+          {Object.values(progress).map((character, index) => {
+            const descriptionText = `${character.name} has walked ${character.totalSteps} steps, and a total of ${character.distanceTravelled} kilometers. She has ${character.distanceToTravel} kilometers to go`;
+            return (
+              <ProgressMeter
+                key={index}
+                name={character.name}
+                icon={character.avatar}
+                colour={character.colour}
+                steps={character.totalSteps}
+                distanceTravelled={character.distanceTravelled}
+                distanceToTravel={character.distanceToTravel}
+                isLoaded={isLoaded && isVisible}
+                descriptionText={descriptionText}
+              ></ProgressMeter>
+            );
+          })}
         </div>
       </VisibilitySensor>
     </Region>
-  )
-}
+  );
+};
 
-Progress.propTypes = {}
+Progress.propTypes = {};
 
-export default Progress
+export default Progress;

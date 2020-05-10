@@ -1,15 +1,15 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-import Bruce from "../../components/characters/bruce"
-import Link from "../../components/link"
-import { Links } from "../../config/config"
-import Region from "../../components/region"
-import VisibilitySensor from "react-visibility-sensor"
-import classnames from "classnames"
-import styles from "./guide-dogs.module.scss"
+import Bruce from "../../components/characters/bruce";
+import Link from "../../components/link";
+import { Links } from "../../config/config";
+import Region from "../../components/region";
+import VisibilitySensor from "react-visibility-sensor";
+import classnames from "classnames";
+import styles from "./guide-dogs.module.scss";
 
 const GuideDogs = () => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <VisibilitySensor
@@ -20,7 +20,7 @@ const GuideDogs = () => {
     >
       <Region
         className={classnames(styles.guideDogs, {
-          [styles.visible]: isVisible,
+          [styles.visible]: isVisible
         })}
       >
         <Bruce className={styles.bruce} withLead={false} />
@@ -30,8 +30,7 @@ const GuideDogs = () => {
             aria-label="The life changing work of Guide Dogs"
           >
             <span aria-hidden="true">
-              The <em>life-changing</em> work of Guide
-              Dogs
+              The <em>life-changing</em> work of Guide Dogs
             </span>
           </h2>
         </header>
@@ -65,9 +64,9 @@ const GuideDogs = () => {
         </Link>
       </Region>
     </VisibilitySensor>
-  )
-}
+  );
+};
 
-GuideDogs.propTypes = {}
+GuideDogs.propTypes = {};
 
-export default GuideDogs
+export default GuideDogs;

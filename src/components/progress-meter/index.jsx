@@ -1,9 +1,8 @@
-import { Line } from "rc-progress"
-import PropTypes from "prop-types"
-import React from "react"
-import classnames from "classnames"
-import styles from "./progress-meter.module.scss"
-import uuid from "uuid"
+import { Line } from "rc-progress";
+import PropTypes from "prop-types";
+import React from "react";
+import classnames from "classnames";
+import styles from "./progress-meter.module.scss";
 
 const ProgressMeter = ({
   name = "",
@@ -13,31 +12,32 @@ const ProgressMeter = ({
   distanceTravelled = 0,
   distanceToTravel = 0,
   descriptionText = "",
-  isLoaded = false,
+  isLoaded = false
 } = {}) => {
   const percentTravelled =
-    (distanceTravelled / (distanceToTravel + distanceTravelled)) * 100
-  const figureId = uuid()
+    (distanceTravelled / (distanceToTravel + distanceTravelled)) * 100;
+
+  const title = `${name}'s progress`;
 
   return (
     <>
-      <p className={styles.figureDescription} id={figureId}>
-        {descriptionText}
-      </p>
       <figure
         className={classnames(styles.progressMeter, {
-          [styles.loaded]: isLoaded,
+          [styles.loaded]: isLoaded
         })}
-        aria-describedby={figureId}
       >
-        <div className={styles.heading} role="heading" aria-hidden="true">
+        <div className={styles.heading} role="presentation">
           {icon && (
-            <div role="presentation" className={styles.icon}>
+            <div role="presentation" className={styles.icon} aria-hidden="true">
               {icon}
             </div>
           )}
-          <span role="heading" className={styles.progressTitle}>
-            {name}&rsquo;s progress
+          <span
+            role="heading"
+            className={styles.progressTitle}
+            aria-label={descriptionText}
+          >
+            {title}
           </span>
         </div>
         <Line
@@ -66,8 +66,8 @@ const ProgressMeter = ({
         </div>
       </figure>
     </>
-  )
-}
+  );
+};
 
 ProgressMeter.propTypes = {
   name: PropTypes.string,
@@ -77,7 +77,7 @@ ProgressMeter.propTypes = {
   distanceTravelled: PropTypes.number,
   distanceToTravel: PropTypes.number,
   descriptionText: PropTypes.string,
-  isLoaded: PropTypes.bool,
-}
+  isLoaded: PropTypes.bool
+};
 
-export default ProgressMeter
+export default ProgressMeter;

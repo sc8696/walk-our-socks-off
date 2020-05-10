@@ -1,18 +1,20 @@
-import GSheetsapi from './gsheetsapi.js';
-
+import GSheetsapi from "./gsheetsapi.js";
 
 function matchValues(valToMatch, valToMatchAgainst, matchingType) {
   try {
-    if (typeof valToMatch != 'undefined') {
+    if (typeof valToMatch != "undefined") {
       valToMatch = valToMatch.toLowerCase().trim();
       valToMatchAgainst = valToMatchAgainst.toLowerCase().trim();
 
-      if (matchingType === 'strict') {
+      if (matchingType === "strict") {
         return valToMatch === valToMatchAgainst;
       }
 
-      if (matchingType === 'loose') {
-        return valToMatch.includes(valToMatchAgainst) || (valToMatch == valToMatchAgainst);
+      if (matchingType === "loose") {
+        return (
+          valToMatch.includes(valToMatchAgainst) ||
+          valToMatch == valToMatchAgainst
+        );
       }
     }
   } catch (e) {
@@ -21,22 +23,21 @@ function matchValues(valToMatch, valToMatchAgainst, matchingType) {
   }
 
   return false;
-};
-
+}
 
 function filterResults(resultsToFilter, filter, options) {
-
   let filteredData = [];
 
   // now we have a list of rows, we can filter by various things
   return resultsToFilter.filter(item => {
-
     let addRow = null;
     let filterMatches = [];
 
-    if (typeof item === 'undefined' ||
+    if (
+      typeof item === "undefined" ||
       item.length <= 0 ||
-      Object.keys(item).length <= 0) {
+      Object.keys(item).length <= 0
+    ) {
       return false;
     }
 
@@ -44,14 +45,16 @@ function filterResults(resultsToFilter, filter, options) {
       const filterValue = filter[key]; // e.g. 'archaeology'
       const itemValue = item[key]; // e.g. 'department' or 'undefined'
 
-      filterMatches.push(matchValues(itemValue, filterValue, options.matching || 'loose'));
+      filterMatches.push(
+        matchValues(itemValue, filterValue, options.matching || "loose")
+      );
     });
 
-    if (options.operator === 'or') {
+    if (options.operator === "or") {
       addRow = filterMatches.some(match => match === true);
     }
 
-    if (options.operator === 'and') {
+    if (options.operator === "and") {
       addRow = filterMatches.every(match => match === true);
     }
 
@@ -59,9 +62,12 @@ function filterResults(resultsToFilter, filter, options) {
   });
 }
 
-
-function processGSheetResults(JSONResponse, returnAllResults, filter, filterOptions) {
-
+function processGSheetResults(
+  JSONResponse,
+  returnAllResults,
+  filter,
+  filterOptions
+) {
   const data = JSONResponse.feed.entry;
   const startRow = 2; // skip the header row(1), don't need it
 
@@ -69,11 +75,10 @@ function processGSheetResults(JSONResponse, returnAllResults, filter, filterOpti
   let colNames = {};
 
   for (let item of data) {
-
-    const cell = item['gs$cell']; // gets cell data
-    const val = cell['$t']; // gets cell value
-    const columnNum = cell['col']; // gets the col number
-    const thisRow = cell['row']; // gets the row number
+    const cell = item["gs$cell"]; // gets cell data
+    const val = cell["$t"]; // gets cell value
+    const columnNum = cell["col"]; // gets the col number
+    const thisRow = cell["row"]; // gets the row number
 
     const colNameToAdd = colNames[columnNum]; // careful, this will be undefined if we hit it on the first pass
 
@@ -83,17 +88,19 @@ function processGSheetResults(JSONResponse, returnAllResults, filter, filterOpti
       continue; // skip the header row
     }
 
-    if (typeof processedResults[thisRow] === 'undefined') {
+    if (typeof processedResults[thisRow] === "undefined") {
       processedResults[thisRow] = {};
     }
 
-    if (typeof colNameToAdd !== 'undefined' && colNameToAdd.length > 0) {
+    if (typeof colNameToAdd !== "undefined" && colNameToAdd.length > 0) {
       processedResults[thisRow][colNameToAdd] = val;
     }
   }
 
   // make sure we're only returning valid, filled data items
-  processedResults = processedResults.filter(result => Object.keys(result).length);
+  processedResults = processedResults.filter(
+    result => Object.keys(result).length
+  );
 
   // if we're not filtering, then return all results
   if (returnAllResults || !filter) {
@@ -103,21 +110,23 @@ function processGSheetResults(JSONResponse, returnAllResults, filter, filterOpti
   return filterResults(processedResults, filter, filterOptions);
 }
 
-
 const gsheetProcessor = function (options, callback) {
-
-  GSheetsapi(options.sheetId, options.sheetNumber ? options.sheetNumber : 1).then(result => {
+  GSheetsapi(
+    options.sheetId,
+    options.sheetNumber ? options.sheetNumber : 1
+  ).then(result => {
     const filteredResults = processGSheetResults(
       result,
       options.returnAllResults || false,
       options.filter || false,
       options.filterOptions || {
-        operator: 'or',
-        matching: 'loose'
-      });
+        operator: "or",
+        matching: "loose"
+      }
+    );
 
     callback(filteredResults);
-  })
+  });
 };
 
 export default gsheetProcessor;

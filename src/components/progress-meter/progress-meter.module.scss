@@ -14,10 +14,6 @@
   will-change: opacity;
 }
 
-.figureDescription {
-  @include screen-reader-only();
-}
-
 .heading {
   display: flex;
   align-items: center;
