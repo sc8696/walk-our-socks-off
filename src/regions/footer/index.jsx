@@ -30,7 +30,7 @@ const Footer = () => {
           &quot;Sarah&quot; and &quot;Lucy&quot; illustrations are a derivative
           work of <Link href={Credits.hummans.link}>humaaans</Link>, by{" "}
           <Link href={Credits.hummans.authorLink}>Pablo Stanley</Link> used
-          under <Link href={Credits.hummans.licenseLink}>CCO</Link>
+          under <Link href={Credits.hummans.licenseLink}>CC BY 4.0</Link>
         </p>
         <p>
           &quot;Bruce, the guide dog&quot; illustration is a derivative of{" "}
