@@ -34,10 +34,10 @@
   [class="tail"] {
     transform-origin: 189px 86px;
     animation: animate(
-    tail-wag,
-    $speed: 1000ms,
-    $repeat: infinite,
-    $direction: alternate
+      tail-wag,
+      $speed: 1000ms,
+      $repeat: infinite,
+      $direction: alternate
     );
   }
 }

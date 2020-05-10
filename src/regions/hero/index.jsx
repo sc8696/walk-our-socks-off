@@ -16,12 +16,12 @@ const Hero = () => {
         <h1>We&rsquo;re walking our socks off!</h1>
       </header>
       <p className={styles.information}>
-        This May, since we can&rsquo;t visit each other, we&rsquo;re each going
-        to walk the 250 kilometres between us (whilst observing the COVID-19
-        pandemic guidelines) in support of Guide Dogs{" "}
+        We&rsquo;re Sarah and Lucy and we&rsquo;re taking on the Guide Dogs{" "}
         <Link href={Links.challenge.link} title={Links.challenge.title}>
-          walk your socks off challenge
-        </Link>
+          walk your socks off challenge.
+        </Link>{" "}
+        Our aim is to rack up enough steps each to cover the{" "}
+        <em>250 kilometres</em> that's keeping us apart in lockdown.
       </p>
       <div className={styles.donateButtonContainer}>
         <Button

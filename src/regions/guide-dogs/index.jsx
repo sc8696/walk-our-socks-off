@@ -39,20 +39,22 @@ const GuideDogs = () => {
         <ul className={styles.information}>
           <li>
             Almost two million people in the UK are living with sight loss and
-            180,000 of those rarely leave home alone
+            of those 180,000 rarely leave home alone
           </li>
           <li>
-            Their life-changing work provides independence and freedom for
-            people who are blind or partially sighted
+            The current coronavirus situation is particularly difficult for
+            those that rely on touch or the support of others to navigate the
+            world around them
           </li>
           <li>
-            Guide dogs provide life-changing service for thousands of people
-            with vision impairment
+            Guide dogs provide a range of life changing services beyond their
+            dogs to help those with sight loss enjoy freedom and independence
           </li>
           <li>
-            These services range from providing guide dogs, to teaching
-            independent living skills, and support in coming to terms with sight
-            loss
+            Their services range from providing resources for children &amp;
+            young people, teaching independent living skills, to connecting
+            people with sighted guides &amp; helping support families coming to
+            terms with sight loss
           </li>
         </ul>
 
