@@ -1,19 +1,19 @@
 export const Links = {
   challenge: {
     link: "https://guidedogs.org.uk/walk-your-socks-off",
-    title: ""
+    title: "",
   },
   donate: {
     link: "https://www.justgiving.com/fundraising/walkoursocksoff",
-    title: ""
+    title: "Donate to Guide Dogs UK via JustGiving website",
   },
   guideDogServices: {
     link: "https://www.guidedogs.org.uk/services-we-provide",
-    title: ""
+    title: "",
   },
   guideDogDonations: {
     link: "https://www.guidedogs.org.uk/about-us/how-your-money-is-helping",
-    title: ""
+    title: "",
   },
   cheerUsOnLink: {},
 }
