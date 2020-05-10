@@ -23,7 +23,7 @@ const Hero = () => {
           walk your socks off challenge
         </Link>
       </p>
-      <div role="button" className={styles.donateButtonContainer}>
+      <div className={styles.donateButtonContainer}>
         <Button
           title={Links.donate.title}
           buttonType="primary"
@@ -32,7 +32,6 @@ const Hero = () => {
           Donate
         </Button>
       </div>
-      {/* <Characters className={styles.charactersDesktop} /> */}
       <div
         role="presentation"
         aria-hidden="true"

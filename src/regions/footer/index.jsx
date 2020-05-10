@@ -7,9 +7,7 @@ import styles from "./footer.module.scss"
 const Footer = () => {
   return (
     <Region role="contentinfo" className={styles.footer} regionType={"footer"}>
-      <header className={styles.heading}>
-        <h2>Credits</h2>
-      </header>
+      <h2 className={styles.heading}>Credits</h2>
       <section className={styles.credit}>
         <h3 className={styles.creditTitle}>
           Created by Sarah McIntyre &amp; Steve Cumming{" "}

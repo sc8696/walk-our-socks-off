@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import Region from "../../components/region"
 import VisibilitySensor from "react-visibility-sensor"
-import classnames from "classnames";
+import classnames from "classnames"
 import styles from "./route.module.scss"
 
 const How = () => {
@@ -14,14 +14,19 @@ const How = () => {
       minTopValue={200}
       partialVisibility
     >
-      <Region className={classnames(styles.how, {
-        [styles.visible]: isVisible
-      })}>
+      <Region
+        className={classnames(styles.how, {
+          [styles.visible]: isVisible,
+        })}
+      >
         <header className={styles.heading}>
-          <h2 className={styles.title}>
+          <h2
+            className={styles.title}
+            aria-label="Racking up miles in lockdown and completing this challenge safely during Coronavirus"
+          >
             Racking up miles in lockdown
             <br />
-            <aside className={"unemph"}>
+            <aside className={"unemph"} aria-hidden="true">
               and completing this challenge safely during Coronavirus
             </aside>
           </h2>

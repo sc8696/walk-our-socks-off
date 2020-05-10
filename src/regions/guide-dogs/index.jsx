@@ -5,7 +5,7 @@ import Link from "../../components/link"
 import { Links } from "../../config/config"
 import Region from "../../components/region"
 import VisibilitySensor from "react-visibility-sensor"
-import classnames from "classnames";
+import classnames from "classnames"
 import styles from "./guide-dogs.module.scss"
 
 const GuideDogs = () => {
@@ -18,13 +18,21 @@ const GuideDogs = () => {
       minTopValue={200}
       partialVisibility
     >
-      <Region className={classnames(styles.guideDogs, {
-        [styles.visible]: isVisible
-      })}>
+      <Region
+        className={classnames(styles.guideDogs, {
+          [styles.visible]: isVisible,
+        })}
+      >
         <Bruce className={styles.bruce} withLead={false} />
         <header className={styles.heading}>
-          <h2 className={"unemph"}>
-            The <span className={"emph"}>life-changing</span> work of Guide Dogs
+          <h2
+            className={"unemph"}
+            aria-label="The life changing work of Guide Dogs"
+          >
+            <span aria-hidden="true">
+              The <em>life-changing</em> work of Guide
+              Dogs
+            </span>
           </h2>
         </header>
 

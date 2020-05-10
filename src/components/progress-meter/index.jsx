@@ -29,12 +29,10 @@ const ProgressMeter = ({
           [styles.loaded]: isLoaded,
         })}
         aria-describedby={figureId}
-        role="presentation"
-        aria-hidden="true"
       >
-        <div className={styles.heading} role="heading">
+        <div className={styles.heading} role="heading" aria-hidden="true">
           {icon && (
-            <div role="presentation" aria-hidden="true" className={styles.icon}>
+            <div role="presentation" className={styles.icon}>
               {icon}
             </div>
           )}
@@ -50,7 +48,7 @@ const ProgressMeter = ({
           strokeColor={colour}
           trailWidth={2.5}
         />
-        <div className={styles.stats} role="presentation">
+        <div className={styles.stats} role="presentation" aria-hidden="true">
           <dl>
             <div>
               <dt>total steps</dt>
