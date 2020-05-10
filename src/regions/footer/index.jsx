@@ -1,8 +1,8 @@
-import { Credits } from "../../config/config"
-import Link from "../../components/link"
-import React from "react"
-import Region from "../../components/region"
-import styles from "./footer.module.scss"
+import { Credits } from "../../config/config";
+import Link from "../../components/link";
+import React from "react";
+import Region from "../../components/region";
+import styles from "./footer.module.scss";
 
 const Footer = () => {
   return (
@@ -29,8 +29,8 @@ const Footer = () => {
         <p>
           &quot;Sarah&quot; and &quot;Lucy&quot; illustrations are a derivative
           work of <Link href={Credits.hummans.link}>hummans</Link>, by{" "}
-          <Link href={Credits.hummans.authorLink}>Pablo Stanley</Link> used under{" "}
-          <Link href={Credits.hummans.licenseLink}>CCO</Link>
+          <Link href={Credits.hummans.authorLink}>Pablo Stanley</Link> used
+          under <Link href={Credits.hummans.licenseLink}>CCO</Link>
         </p>
         <p>
           &quot;Bruce, the guide dog&quot; illustration is a derivative of{" "}
@@ -40,9 +40,9 @@ const Footer = () => {
         </p>
       </section>
     </Region>
-  )
-}
+  );
+};
 
-Footer.propTypes = {}
+Footer.propTypes = {};
 
-export default Footer
+export default Footer;

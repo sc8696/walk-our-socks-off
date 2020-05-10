@@ -15,8 +15,8 @@ export const Links = {
     link: "https://www.guidedogs.org.uk/about-us/how-your-money-is-helping",
     title: ""
   },
-  cheerUsOnLink: {},
-}
+  cheerUsOnLink: {}
+};
 
 export const Credits = {
   guideDogLink: "https://www.guidedogs.org.uk/",
@@ -24,11 +24,11 @@ export const Credits = {
   hummans: {
     link: "https://www.humaaans.com/",
     authorLink: "https://twitter.com/pablostanley",
-    licenseLink: "https://creativecommons.org/licenses/by/4.0/",
+    licenseLink: "https://creativecommons.org/licenses/by/4.0/"
   },
   freepik: {
     link: "https://www.freepik.com/free-photos-vectors/infographic",
     authorLink: "https://www.freepik.com/",
-    licenseLink: "https://www.freepikcompany.com/legal#nav-freepik-agreement",
-  },
-}
+    licenseLink: "https://www.freepikcompany.com/legal#nav-freepik-agreement"
+  }
+};

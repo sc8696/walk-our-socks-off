@@ -1,13 +1,11 @@
 Walk Our Socks off website - Created with GatsbyJS
 
-
 ## 🚀 Quick start
 
 1.  **Install Gatsby**
-    ```npm install -g gatsby-cli```
+    `npm install -g gatsby-cli`
 
-
-2.  **Start developing.**
+2)  **Start developing.**
 
     Navigate into this project's directory and start it up.
 
@@ -17,6 +15,6 @@ Walk Our Socks off website - Created with GatsbyJS
     gatsby develop -H 0.0.0.0
     ```
 
-3.  **Open the site in a browser*
+3)  \*_Open the site in a browser_
 
     The site is now running at `http://localhost:8000`!

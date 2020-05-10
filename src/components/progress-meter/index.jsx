@@ -1,9 +1,9 @@
-import { Line } from "rc-progress"
-import PropTypes from "prop-types"
-import React from "react"
-import classnames from "classnames"
-import styles from "./progress-meter.module.scss"
-import uuid from "uuid"
+import { Line } from "rc-progress";
+import PropTypes from "prop-types";
+import React from "react";
+import classnames from "classnames";
+import styles from "./progress-meter.module.scss";
+import uuid from "uuid";
 
 const ProgressMeter = ({
   name = "",
@@ -13,11 +13,11 @@ const ProgressMeter = ({
   distanceTravelled = 0,
   distanceToTravel = 0,
   descriptionText = "",
-  isLoaded = false,
+  isLoaded = false
 } = {}) => {
   const percentTravelled =
-    (distanceTravelled / (distanceToTravel + distanceTravelled)) * 100
-  const figureId = uuid()
+    (distanceTravelled / (distanceToTravel + distanceTravelled)) * 100;
+  const figureId = uuid();
 
   return (
     <>
@@ -26,7 +26,7 @@ const ProgressMeter = ({
       </p>
       <figure
         className={classnames(styles.progressMeter, {
-          [styles.loaded]: isLoaded,
+          [styles.loaded]: isLoaded
         })}
         aria-describedby={figureId}
       >
@@ -66,8 +66,8 @@ const ProgressMeter = ({
         </div>
       </figure>
     </>
-  )
-}
+  );
+};
 
 ProgressMeter.propTypes = {
   name: PropTypes.string,
@@ -77,7 +77,7 @@ ProgressMeter.propTypes = {
   distanceTravelled: PropTypes.number,
   distanceToTravel: PropTypes.number,
   descriptionText: PropTypes.string,
-  isLoaded: PropTypes.bool,
-}
+  isLoaded: PropTypes.bool
+};
 
-export default ProgressMeter
+export default ProgressMeter;

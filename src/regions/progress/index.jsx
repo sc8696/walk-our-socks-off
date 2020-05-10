@@ -1,17 +1,17 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useState } from "react";
 
-import { ProgressContext } from "./../../contexts/progress.provider"
-import ProgressMeter from "../../components/progress-meter"
-import Region from "../../components/region"
-import VisibilitySensor from "react-visibility-sensor"
-import styles from "./progress.module.scss"
+import { ProgressContext } from "./../../contexts/progress.provider";
+import ProgressMeter from "../../components/progress-meter";
+import Region from "../../components/region";
+import VisibilitySensor from "react-visibility-sensor";
+import styles from "./progress.module.scss";
 
 const Progress = () => {
-  const [isVisible, setIsVisible] = useState(false)
-  const { progress } = useContext(ProgressContext) || {}
+  const [isVisible, setIsVisible] = useState(false);
+  const { progress } = useContext(ProgressContext) || {};
 
   const isLoaded =
-    progress?.sarah?.timeline.length + progress?.lucy?.timeline?.length > 0
+    progress?.sarah?.timeline.length + progress?.lucy?.timeline?.length > 0;
 
   return (
     <Region className={styles.progress}>
@@ -41,9 +41,9 @@ const Progress = () => {
         </div>
       </VisibilitySensor>
     </Region>
-  )
-}
+  );
+};
 
-Progress.propTypes = {}
+Progress.propTypes = {};
 
-export default Progress
+export default Progress;

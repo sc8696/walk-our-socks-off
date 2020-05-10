@@ -4,5 +4,10 @@
     "strict": 0
   },
   "plugins": ["jsx-a11y"],
-  "extends": ["react-app", "eslint:recommended", "plugin:react/recommended", "plugin:jsx-a11y/strict"]
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/strict"
+  ]
 }

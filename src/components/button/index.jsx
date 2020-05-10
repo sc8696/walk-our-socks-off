@@ -1,10 +1,10 @@
-import PropTypes from "prop-types"
-import React from "react"
-import classnames from "classnames"
+import PropTypes from "prop-types";
+import React from "react";
+import classnames from "classnames";
 
 const classMap = {
-  primary: "button-primary",
-}
+  primary: "button-primary"
+};
 
 const Button = ({
   children,
@@ -25,7 +25,7 @@ const Button = ({
       >
         {children}
       </a>
-    )
+    );
   }
   return (
     <button
@@ -35,8 +35,8 @@ const Button = ({
     >
       {children}
     </button>
-  )
-}
+  );
+};
 
 Button.propTypes = {
   children: PropTypes.any,
@@ -44,6 +44,6 @@ Button.propTypes = {
   buttonType: PropTypes.oneOf(["primary", "secondary"]),
   link: PropTypes.string,
   title: PropTypes.string
-}
+};
 
-export default Button
+export default Button;

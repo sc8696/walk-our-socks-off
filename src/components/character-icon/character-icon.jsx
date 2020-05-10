@@ -1,7 +1,7 @@
-import PropTypes from "prop-types"
-import React from "react"
-import classnames from "classnames"
-import styles from "./floor.module.scss"
+import PropTypes from "prop-types";
+import React from "react";
+import classnames from "classnames";
+import styles from "./floor.module.scss";
 
 const CharacterIcon = ({ className }) => {
   return (
@@ -10,11 +10,11 @@ const CharacterIcon = ({ className }) => {
       aria-hidden="true"
       className={classnames(styles.floor, className)}
     ></div>
-  )
-}
+  );
+};
 
 CharacterIcon.propTypes = {
-  className: PropTypes.string,
-}
+  className: PropTypes.string
+};
 
-export default CharacterIcon
+export default CharacterIcon;

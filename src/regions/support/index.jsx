@@ -1,14 +1,14 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-import Button from "../../components/button"
-import { Links } from "../../config/config"
-import Region from "../../components/region"
-import VisibilitySensor from "react-visibility-sensor"
-import classnames from "classnames"
-import styles from "./support.module.scss"
+import Button from "../../components/button";
+import { Links } from "../../config/config";
+import Region from "../../components/region";
+import VisibilitySensor from "react-visibility-sensor";
+import classnames from "classnames";
+import styles from "./support.module.scss";
 
 const Support = () => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <VisibilitySensor
@@ -19,7 +19,7 @@ const Support = () => {
     >
       <Region
         className={classnames(styles.support, {
-          [styles.visible]: isVisible,
+          [styles.visible]: isVisible
         })}
       >
         <header className={styles.heading}>
@@ -59,9 +59,9 @@ const Support = () => {
         </footer>
       </Region>
     </VisibilitySensor>
-  )
-}
+  );
+};
 
-Support.propTypes = {}
+Support.propTypes = {};
 
-export default Support
+export default Support;

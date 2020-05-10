@@ -1,12 +1,12 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-import Region from "../../components/region"
-import VisibilitySensor from "react-visibility-sensor"
-import classnames from "classnames"
-import styles from "./route.module.scss"
+import Region from "../../components/region";
+import VisibilitySensor from "react-visibility-sensor";
+import classnames from "classnames";
+import styles from "./route.module.scss";
 
 const How = () => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
   return (
     <VisibilitySensor
       active={!isVisible}
@@ -16,7 +16,7 @@ const How = () => {
     >
       <Region
         className={classnames(styles.how, {
-          [styles.visible]: isVisible,
+          [styles.visible]: isVisible
         })}
       >
         <header className={styles.heading}>
@@ -45,9 +45,9 @@ const How = () => {
         </div>
       </Region>
     </VisibilitySensor>
-  )
-}
+  );
+};
 
-How.propTypes = {}
+How.propTypes = {};
 
-export default How
+export default How;

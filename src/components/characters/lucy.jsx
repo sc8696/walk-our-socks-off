@@ -1,6 +1,6 @@
-import LucyGraphic from "./../../images/lucy.svg"
-import PropTypes from "prop-types"
-import React from "react"
+import LucyGraphic from "./../../images/lucy.svg";
+import PropTypes from "prop-types";
+import React from "react";
 import styles from "./character.module.scss";
 
 const Lucy = ({ className = "" }) => {
@@ -13,11 +13,11 @@ const Lucy = ({ className = "" }) => {
         className={styles.character}
       />
     </div>
-  )
-}
+  );
+};
 
 Lucy.propTypes = {
-  className: PropTypes.string,
-}
+  className: PropTypes.string
+};
 
-export default Lucy
+export default Lucy;

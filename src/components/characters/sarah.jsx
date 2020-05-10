@@ -1,7 +1,7 @@
-import PropTypes from "prop-types"
-import React from "react"
-import SarahGraphic from "./../../images/sarah.svg"
-import styles from "./sarah.module.scss"
+import PropTypes from "prop-types";
+import React from "react";
+import SarahGraphic from "./../../images/sarah.svg";
+import styles from "./sarah.module.scss";
 
 const Sarah = ({ className = "" }) => {
   return (
@@ -13,11 +13,11 @@ const Sarah = ({ className = "" }) => {
         className={styles.sarah}
       />
     </div>
-  )
-}
+  );
+};
 
 Sarah.propTypes = {
-  className: PropTypes.string,
-}
+  className: PropTypes.string
+};
 
-export default Sarah
+export default Sarah;
