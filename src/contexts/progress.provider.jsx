@@ -35,11 +35,12 @@ export const ProgressProvider = ({ children }) => {
 
   const getProgress = () => {
     SheetReader(readerOptions, sarahResults => {
-      SheetReader({ ...readerOptions, sheetNumber: 2 }, lucyResults => {
-        setCharacterProgress("sarah", trimResults(sarahResults));
-        setCharacterProgress("lucy", trimResults(lucyResults));
-        setProgress({ ...characterList });
-      });
+      setCharacterProgress("sarah", trimResults(sarahResults));
+      setProgress({ ...characterList });
+    });
+    SheetReader({ ...readerOptions, sheetNumber: 2 }, lucyResults => {
+      setCharacterProgress("lucy", trimResults(lucyResults));
+      setProgress({ ...characterList });
     });
   };
 

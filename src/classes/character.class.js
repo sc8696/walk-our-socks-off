@@ -1,6 +1,7 @@
 export class Character {
-  constructor(name = "", colour = "", avatar = null) {
+  constructor(name = "", home = "", colour = "", avatar = null) {
     this.name = name;
+    this.home = home;
     this.colour = colour;
     this.avatar = avatar;
     this.totalSteps = 0;

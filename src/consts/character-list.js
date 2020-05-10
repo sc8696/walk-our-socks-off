@@ -6,8 +6,8 @@ import SarahBadge from "./../images/sarah-badge.svg";
 import palette from "!!sass-variable-loader!./../styles/palette.scss";
 
 const characterList = {
-  sarah: new Character("Sarah", palette.accent1, <SarahBadge />),
-  lucy: new Character("Lucy", palette.accent2, <LucyBadge />)
+  sarah: new Character("Sarah", "Cheltenham", palette.accent1, <SarahBadge />),
+  lucy: new Character("Lucy", "Clacton-on-Sea", palette.accent2, <LucyBadge />)
 };
 
 export default { ...characterList };

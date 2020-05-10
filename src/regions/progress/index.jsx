@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 
+import { App } from "../../config/config";
 import { ProgressContext } from "./../../contexts/progress.provider";
 import ProgressMeter from "../../components/progress-meter";
 import Region from "../../components/region";
@@ -25,6 +26,7 @@ const Progress = () => {
         onChange={v => setIsVisible(v)}
         minTopValue={150}
         partialVisibility
+        scrollThrottle={App.scrollThrottle}
       >
         <div className={styles.meters}>
           {Object.values(progress).map((character, index) => {

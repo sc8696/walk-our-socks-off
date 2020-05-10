@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import { App } from "../../config/config";
 import Region from "../../components/region";
 import VisibilitySensor from "react-visibility-sensor";
 import classnames from "classnames";
@@ -11,8 +12,9 @@ const How = () => {
     <VisibilitySensor
       active={!isVisible}
       onChange={v => setIsVisible(v)}
-      minTopValue={200}
+      minTopValue={App.scrollOffset}
       partialVisibility
+      scrollThrottle={App.scrollThrottle}
     >
       <Region
         className={classnames(styles.how, {
