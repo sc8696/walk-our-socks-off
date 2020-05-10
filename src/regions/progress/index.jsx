@@ -11,7 +11,9 @@ const Progress = () => {
   const { progress } = useContext(ProgressContext) || {};
 
   const isLoaded =
-    progress?.sarah?.timeline.length + progress?.lucy?.timeline?.length > 0;
+    (progress?.sarah?.timeline?.length ?? 0) +
+      (progress?.lucy?.timeline?.length ?? 0) >
+    0;
 
   return (
     <Region className={styles.progress}>
