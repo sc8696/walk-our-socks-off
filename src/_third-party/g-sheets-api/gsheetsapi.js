@@ -3,7 +3,6 @@ const gsheetsAPI = function(sheetId, sheetNumber = 1) {
 
     try {
       const sheetsUrl = `https://spreadsheets.google.com/feeds/cells/${sheetId}/${sheetNumber}/public/values?alt=json-in-script`;
-console.debug(sheetsUrl)
       return fetch(sheetsUrl)
       .then(response => {
         if(!response.ok) {

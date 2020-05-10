@@ -9,13 +9,12 @@ import { ProgressProvider } from "../contexts/progress.provider"
 import React from "react"
 import Route from "../regions/route"
 import SEO from "../components/seo"
-import { ScrollProvider } from "../contexts/scroll.provider"
 import Support from "../regions/support"
 
 const IndexPage = () => {
   return (
     <ProgressProvider>
-      <ScrollProvider>
+      <>
         <Hero />
         {/* <Route /> */}
         <Progress />
@@ -23,8 +22,8 @@ const IndexPage = () => {
         <GuideDogs />
         <Support />
         <Footer />
-        <SEO title="Home" />
-      </ScrollProvider>
+        <SEO title="We're walking our socks off for Guide Dogs" />
+      </>
     </ProgressProvider>
   )
 }

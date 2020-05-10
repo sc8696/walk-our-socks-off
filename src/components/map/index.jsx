@@ -1,10 +1,6 @@
 import React from "react"
-import ReactMapboxGl from "react-mapbox-gl"
+import mapboxgl from "mapbox-gl"
 import styles from "./map.module.scss"
-
-const MapBox = ReactMapboxGl({
-  accessToken: "it-doesn't-matter"
-})
 
 const tileServer =
   "https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg"
@@ -27,18 +23,27 @@ const customMapStyle = {
       maxzoom: 22,
     },
   ],
+  center: [-0.389284868409795, 51.96030424936522],
+  zoom: 8
 }
 
 const Map = () => {
+  const setupMap = element => {
+    if(element){
+      new mapboxgl.Map({
+        container: element,
+        style: customMapStyle,
+      });
+    }
+  }
+
   return (
-    <div className={styles.mapContainer} role="presentation" aria-hidden="true">
-      <MapBox
-        style={customMapStyle}
-        containerStyle={{
-          width: "100%",
-          height: "100%",
-        }}
-      ></MapBox>
+    <div
+      ref={el => setupMap(el)}
+      className={styles.mapContainer}
+      role="presentation"
+      aria-hidden="true"
+    >
     </div>
   )
 }

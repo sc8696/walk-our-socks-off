@@ -11,7 +11,7 @@ const Progress = () => {
   const { progress } = useContext(ProgressContext) || {}
 
   const isLoaded =
-    progress.sarah.timeline.length + progress.lucy.timeline.length > 0
+    progress?.sarah?.timeline.length + progress?.lucy?.timeline?.length > 0
 
   return (
     <Region className={styles.progress}>
@@ -21,7 +21,7 @@ const Progress = () => {
       <VisibilitySensor
         active={!isVisible}
         onChange={v => setIsVisible(v)}
-        minTopValue={200}
+        minTopValue={150}
         partialVisibility
       >
         <div className={styles.meters}>
