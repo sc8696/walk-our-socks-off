@@ -1,10 +1,25 @@
 @import "./../../styles/tools.scss";
+@import "./../../styles/animations.scss";
 @import "./../../styles/palette.scss";
 @import "./../../styles/typography.module.scss";
 
 .support {
   max-width: $max-content-width-narrow/1.5;
   text-align: left;
+
+  &.visible {
+    .heading {
+      @include cascade();
+    }
+
+    .information {
+      @include cascade($delay: 100ms);
+    }
+
+    .buttonGroup {
+      @include cascade($delay: 400ms);
+    }
+  }
 }
 
 .heading {
@@ -12,6 +27,7 @@
   max-width: $max-content-width-narrow;
   width: 100%;
   text-transform: uppercase;
+  opacity: 0;
   .title {
     @extend h1;
     margin-bottom: spacing(1);
@@ -29,10 +45,15 @@
   }
 }
 
+.information {
+  opacity: 0;
+}
+
 .buttonGroup {
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  opacity: 0;
   > * + * {
     margin-left: spacing();
   }

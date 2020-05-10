@@ -1,9 +1,28 @@
 @import "./../../styles/tools.scss";
 @import "./../../styles/palette.scss";
+@import "./../../styles/animations.scss";
 
 .guide-dogs {
   overflow: visible;
   background-color: $background-quaternary;
+
+  &.visible {
+    .heading {
+      @include cascade();
+    }
+
+    .information {
+      @for $i from 0 through 10 {
+        li:nth-child(#{$i}) {
+          @include cascade($delay: $i * 50ms);
+        }
+      }
+    }
+
+    .link {
+      @include cascade($delay: 400ms);
+    }
+  }
 }
 
 .bruce {
@@ -14,8 +33,17 @@
 
   [class="tail"] {
     transform-origin: 189px 86px;
-    animation: animate(tail-wag, $speed: 1000ms, $repeat: infinite, $direction: alternate);
+    animation: animate(
+    tail-wag,
+    $speed: 1000ms,
+    $repeat: infinite,
+    $direction: alternate
+    );
   }
+}
+
+.heading {
+  opacity: 0;
 }
 
 .information {
@@ -30,6 +58,7 @@
     padding-left: spacing(3);
     width: 50%;
     text-align: left;
+    opacity: 0;
     &:before {
       position: absolute;
       left: 0;
@@ -40,12 +69,13 @@
       background-repeat: no-repeat;
       content: "";
     }
-  };
+  }
 }
 
 .link {
   text-transform: uppercase;
   font-size: font-size(2);
+  opacity: 0;
 }
 
 @include mobile {

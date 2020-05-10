@@ -1,4 +1,5 @@
 @import "./../../styles/tools.scss";
+@import "./../../styles/animations.scss";
 @import "./../../styles/typography.module.scss";
 
 .progressMeter {
@@ -9,6 +10,8 @@
   margin-bottom: spacing(2);
   width: 100%;
   opacity: 0;
+
+  will-change: opacity;
 }
 
 .figureDescription {
@@ -59,11 +62,15 @@
 
     dt {
       font-size: font-sizes(2);
+
+      will-change: transform, opacity;
     }
 
     dd {
       @extend h2;
       margin-bottom: spacing(1);
+
+      will-change: transform, opacity;
     }
   }
 }
@@ -75,10 +82,10 @@
       > div {
         &:nth-child(#{$i}) {
           dt {
-            animation: animate(fade-in-from-top, $delay: $i * 100ms);
+            @include cascade($delay: $i * 100ms);
           }
           dd {
-            animation: animate(fade-in-from-top, $delay: $i * 120ms);
+            @include cascade($delay: $i * 120ms);
           }
         }
       }
@@ -108,16 +115,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes fade-in-from-top {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
   }
 }

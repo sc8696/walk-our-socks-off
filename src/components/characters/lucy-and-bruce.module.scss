@@ -9,11 +9,15 @@
     top: 140px;
     left: 70px;
     animation: animate(fade-in-from-right, $delay: 500ms);
+
+    will-change: transform, opacity;
   }
   [class="lucy"] {
     position: relative;
     z-index: 1;
     animation: animate(fade-in-from-right, $delay: 566ms);
+
+    will-change: transform, opacity;
   }
 }
 

@@ -1,0 +1,17 @@
+@import "./tools.scss";
+@mixin cascade($delay: 0ms) {
+  animation: animate(cascade, $delay: $delay);
+
+  will-change: transform, opacity;
+}
+
+@keyframes cascade {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

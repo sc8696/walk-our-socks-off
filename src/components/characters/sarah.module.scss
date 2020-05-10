@@ -3,6 +3,8 @@
 .sarah {
   @extend .character;
   animation: animate(fade-in-from-left, $delay: 500ms);
+
+  will-change: transform, opacity;
 }
 
 @keyframes fade-in-from-left {
