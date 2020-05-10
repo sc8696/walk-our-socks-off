@@ -34,8 +34,8 @@ const How = () => {
         <div className={styles.information}>
           <p>
             We&rsquo;re using our daily exercise to get out and walk as far as
-            we reasonably can. For Lucy, that&rsquo;s a nice long walk with her
-            guide dog Bruce.
+            we reasonably can. For Lucy, that includes a nice long walk with her
+            guide dog, Bruce.
           </p>
           <p>
             For the rest of our miles, we&rsquo;re getting creative at home -

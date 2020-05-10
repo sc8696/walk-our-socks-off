@@ -28,7 +28,7 @@ const Footer = () => {
         <h3 className={styles.creditTitle}>Illustration credits</h3>
         <p>
           &quot;Sarah&quot; and &quot;Lucy&quot; illustrations are a derivative
-          work of <Link href={Credits.hummans.link}>hummans</Link>, by{" "}
+          work of <Link href={Credits.hummans.link}>humaaans</Link>, by{" "}
           <Link href={Credits.hummans.authorLink}>Pablo Stanley</Link> used
           under <Link href={Credits.hummans.licenseLink}>CCO</Link>
         </p>
