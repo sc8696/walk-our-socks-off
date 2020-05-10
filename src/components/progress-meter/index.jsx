@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import classnames from "classnames";
 import styles from "./progress-meter.module.scss";
-import uuid from "uuid";
 
 const ProgressMeter = ({
   name = "",
@@ -17,27 +16,28 @@ const ProgressMeter = ({
 } = {}) => {
   const percentTravelled =
     (distanceTravelled / (distanceToTravel + distanceTravelled)) * 100;
-  const figureId = uuid();
+
+  const title = `${name}'s progress`;
 
   return (
     <>
-      <p className={styles.figureDescription} id={figureId}>
-        {descriptionText}
-      </p>
       <figure
         className={classnames(styles.progressMeter, {
           [styles.loaded]: isLoaded
         })}
-        aria-describedby={figureId}
       >
-        <div className={styles.heading} role="heading" aria-hidden="true">
+        <div className={styles.heading} role="presentation">
           {icon && (
-            <div role="presentation" className={styles.icon}>
+            <div role="presentation" className={styles.icon} aria-hidden="true">
               {icon}
             </div>
           )}
-          <span role="heading" className={styles.progressTitle}>
-            {name}&rsquo;s progress
+          <span
+            role="heading"
+            className={styles.progressTitle}
+            aria-label={descriptionText}
+          >
+            {title}
           </span>
         </div>
         <Line
