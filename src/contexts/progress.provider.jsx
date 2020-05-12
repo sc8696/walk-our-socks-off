@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import PropTypes from "prop-types";
-import SheetReader from "./../_third-party/g-sheets-api";
+import SheetReader from "g-sheets-api";
 import characterList from "../consts/character-list";
 
 export const ProgressContext = React.createContext();
