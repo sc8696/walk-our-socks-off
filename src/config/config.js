@@ -1,7 +1,7 @@
 export const Links = {
   challenge: {
     link: "https://guidedogs.org.uk/walk-your-socks-off",
-    title: ""
+    title: "Find "
   },
   donate: {
     link: "https://www.justgiving.com/fundraising/walkoursocksoff",
@@ -30,6 +30,12 @@ export const Credits = {
     link: "https://www.freepik.com/free-photos-vectors/infographic",
     authorLink: "https://www.freepik.com/",
     licenseLink: "https://www.freepikcompany.com/legal#nav-freepik-agreement"
+  },
+  maps: {
+    authorLink: "http://stamen.com/",
+    licenseLink: "http://creativecommons.org/licenses/by/3.0",
+    dataLink: "http://openstreetmap.org/",
+    dataLicenseLink: "http://www.openstreetmap.org/copyright"
   }
 };
 

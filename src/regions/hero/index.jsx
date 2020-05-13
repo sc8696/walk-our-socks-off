@@ -16,11 +16,11 @@ const Hero = () => {
         <h1>We&rsquo;re walking our socks off!</h1>
       </header>
       <p className={styles.information}>
-        We&rsquo;re Sarah and Lucy and we&rsquo;re taking on the Guide Dogs{" "}
+        We&rsquo;re Sarah and Lucy and we&rsquo;re taking on the{" "}
         <Link href={Links.challenge.link} title={Links.challenge.title}>
-          walk your socks off challenge.
+          walk your socks off challenge
         </Link>{" "}
-        Our aim is to rack up enough steps each to cover the{" "}
+        for Guide Dogs. Our aim is to rack up enough steps each to cover the{" "}
         <em>250 kilometres</em> that's keeping us apart in lockdown.
       </p>
       <div className={styles.donateButtonContainer}>

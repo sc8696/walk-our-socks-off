@@ -25,18 +25,24 @@ const Footer = () => {
       </section>
 
       <section className={styles.credit}>
-        <h3 className={styles.creditTitle}>Illustration credits</h3>
+        <h3 className={styles.creditTitle}>Credits</h3>
         <p>
           &quot;Sarah&quot; and &quot;Lucy&quot; illustrations are a derivative
           work of <Link href={Credits.hummans.link}>humaaans</Link>, by{" "}
-          <Link href={Credits.hummans.authorLink}>Pablo Stanley</Link> used
-          under <Link href={Credits.hummans.licenseLink}>CC BY 4.0</Link>
+          <Link href={Credits.hummans.authorLink}>Pablo Stanley</Link> under{" "}
+          <Link href={Credits.hummans.licenseLink}>CC BY 4.0</Link>
         </p>
         <p>
           &quot;Bruce, the guide dog&quot; illustration is a derivative of{" "}
           <Link href={Credits.freepik.link}>Infographic vector</Link> created by{" "}
-          <Link href={Credits.freepik.authorLink}> freepik</Link> used under{" "}
+          <Link href={Credits.freepik.authorLink}> freepik</Link> under{" "}
           <Link href={Credits.freepik.licenseLink}>Freepik license</Link>
+        </p>
+        <p>
+          Map tiles by <Link href={Credits.maps.authorLink}>Stamen Design</Link>{" "}
+          under <Link href={Credits.maps.licenseLink}>CC BY 3.0</Link>. Data by{" "}
+          <Link href={Credits.maps.dataLink}>OpenStreetMap</Link> under{" "}
+          <Link href={Credits.maps.dataLicenseLink}>ODbL</Link>
         </p>
       </section>
     </Region>
