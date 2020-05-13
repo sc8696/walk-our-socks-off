@@ -1,12 +1,13 @@
 import uuid from "uuid";
 
 export class Character {
-  constructor(name = "", home = "", colour = "", avatar = null) {
+  constructor(name = "", home = "", colour = "", avatar = null, marker = null) {
     this.id = uuid();
     this.name = name;
     this.home = home;
     this.colour = colour;
     this.avatar = avatar;
+    this.marker = marker;
     this.totalSteps = 0;
     this.distanceTravelled = 0;
     this.distanceToTravel = 999;
