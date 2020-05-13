@@ -39,7 +39,7 @@ const Support = () => {
             We know this is a difficult time for everybody and if you
             can&rsquo;t afford to donate right now, that&rsquo;s okay. We still
             invite you to follow our progress, to cheer us on and to share this
-            page if you liked it
+            page if you liked it.
           </p>
           <p>
             If you can afford to give a little something we&rsquo;d really
