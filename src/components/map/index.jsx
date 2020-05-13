@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-import { DrawStuffOnMap } from "./draw";
+import { MapAnimator } from "./map-animator";
 import PropTypes from "prop-types";
 import mapboxgl from "mapbox-gl";
+import poi from "./map-data/poi";
+import route from "./map-data/route";
 import styles from "./map.module.scss";
 
 const tileServer =
@@ -27,22 +29,37 @@ const customMapStyle = {
     }
   ],
   center: [-0.389284868409795, 51.96030424936522],
-  zoom: 8
+  zoom: 5
 };
 
-const Map = ({ characters }) => {
-  const [mapBox, setMapBox] = useState(null);
-  const setupMap = element => {
-    if (element && !mapBox) {
-      const map = new mapboxgl.Map({
-        container: element,
-        style: customMapStyle
-      });
-      setMapBox(map);
+const setupMap = element => {
+  return new mapboxgl.Map({
+    container: element,
+    style: customMapStyle
+  });
+};
 
-      DrawStuffOnMap(map, characters);
+const Map = ({ characters, drawRoute }) => {
+  const [map, setMap] = useState(null);
+  const mapElement = useRef(null);
+  const characterArray = Object.values(characters);
+
+  useEffect(() => {
+    if (!map && mapElement.current) {
+      console.debug(map, mapElement);
+      const m = setupMap(mapElement.current);
+      m.on("load", () => {
+        setMap(m);
+      });
+    } else if (map && drawRoute) {
+      new MapAnimator(map, {
+        characterOne: characterArray[0],
+        characterTwo: characterArray[1],
+        route,
+        places: poi
+      }).animate();
     }
-  };
+  }, [map, drawRoute]);
 
   return (
     <>
@@ -51,7 +68,7 @@ const Map = ({ characters }) => {
         rel="stylesheet"
       />
       <div
-        ref={el => setupMap(el)}
+        ref={mapElement}
         className={styles.mapContainer}
         role="presentation"
         aria-hidden="true"
@@ -61,7 +78,8 @@ const Map = ({ characters }) => {
 };
 
 Map.propTypes = {
-  characters: PropTypes.object
+  characters: PropTypes.object,
+  drawRoute: PropTypes.bool
 };
 
 export default Map;

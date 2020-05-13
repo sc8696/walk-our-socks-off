@@ -1,5 +1,8 @@
+import uuid from "uuid";
+
 export class Character {
   constructor(name = "", home = "", colour = "", avatar = null) {
+    this.id = uuid();
     this.name = name;
     this.home = home;
     this.colour = colour;

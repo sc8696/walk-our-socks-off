@@ -1,31 +1,3 @@
-const tileServer =
-  "https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg";
-
-const map = new mapboxgl.Map({
-  container: "map", // container id
-  style: {
-    version: 8,
-    sources: {
-      "raster-tiles": {
-        type: "raster",
-        tiles: [tileServer],
-        tileSize: 256
-      }
-    },
-    layers: [
-      {
-        id: "simple-tiles",
-        type: "raster",
-        source: "raster-tiles",
-        minzoom: 0,
-        maxzoom: 22
-      }
-    ], // stylesheet location
-    center: [-0.389284868409795, 51.96030424936522], // starting position [lng, lat]
-    zoom: 8 // starting zoom
-  }
-});
-
 const sarah = {
   name: "Sarah",
   startlocation: "Cheltenham",
@@ -46,12 +18,6 @@ async function getRoute() {
 async function getPlaces() {
   const places = await fetch("./places.json");
   return places.json();
-}
-
-async function getDistances() {
-  // the total distances covered so far by [Sarah, Lucy] - to come from data file
-  const distances = [250, 10];
-  return distances;
 }
 
 // I'm sorry!

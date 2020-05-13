@@ -30,9 +30,9 @@
   }
   .mapContainer {
     width: calc(100% + #{spacing(4)});
-    height: 300px;
-    border-right: 0;
-    border-left: 0;
+    height: 400px;
+    // border-right: 0;
+    // border-left: 0;
     // box-shadow: none;
   }
 }

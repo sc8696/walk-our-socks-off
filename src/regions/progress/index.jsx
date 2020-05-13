@@ -24,7 +24,7 @@ const Progress = () => {
       <VisibilitySensor
         active={!isVisible}
         onChange={v => setIsVisible(v)}
-        minTopValue={150}
+        minTopValue={125}
         partialVisibility
         scrollThrottle={App.scrollThrottle}
       >

@@ -3,34 +3,6 @@ import { along, lineSliceAlong, lineString, nearestPoint } from "@turf/turf";
 import mapboxgl from "mapbox-gl";
 
 export function DrawStuffOnMap(map = null, characters = {}) {
-  const sarah = {
-    name: "Sarah",
-    startlocation: "Cheltenham",
-    className: "sarah"
-  };
-
-  const lucy = {
-    name: "Lucy",
-    startlocation: "Clacton-on-Sea",
-    className: "lucy"
-  };
-
-  async function getRoute() {
-    const route = await fetch("./route.json");
-    return route.json();
-  }
-
-  async function getPlaces() {
-    const places = await fetch("./poi.json");
-    return places.json();
-  }
-
-  async function getDistances() {
-    // the total distances covered so far by [Sarah, Lucy] - to come from data file
-    const distances = [95, 130];
-    return distances;
-  }
-
   // I'm sorry!
   function drawAnimatedRouteAndMarker(
     route,
@@ -170,68 +142,7 @@ export function DrawStuffOnMap(map = null, characters = {}) {
       .addTo(map);
   }
 
-  // set styles, and data sources for Sarah & Lucy routes.
-  function initialiseRoutes() {
-    var initial = {
-      type: "FeatureCollection",
-      features: [
-        {
-          type: "Feature",
-          geometry: {
-            type: "LineString",
-            coordinates: [[0, 0]]
-          }
-        }
-      ]
-    };
-    map.addSource("sarah", {
-      type: "geojson",
-      data: initial
-    });
-
-    map.addLayer({
-      id: "sarah",
-      type: "line",
-      source: "sarah",
-      layout: {
-        "line-join": "round",
-        "line-cap": "round"
-      },
-      paint: {
-        "line-color": "#FF715B",
-        "line-width": 6,
-        "line-translate": [0, -6]
-      }
-    });
-
-    map.addSource("lucy", {
-      type: "geojson",
-      data: initial
-    });
-
-    map.addLayer({
-      id: "lucy",
-      type: "line",
-      source: "lucy",
-      layout: {
-        "line-join": "round",
-        "line-cap": "round"
-      },
-      paint: {
-        "line-color": "#0FA3B1",
-        "line-width": 6,
-        "line-translate": [0, 0]
-      }
-    });
-  }
-
   (async function main() {
-    const route = await getRoute();
-    const distances = await getDistances();
-    const places = await getPlaces();
-
-    initialiseRoutes();
-
     // place markers for start labels
     placeStartLabels(route.routes[0].geometry.coordinates);
 
