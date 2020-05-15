@@ -143,7 +143,7 @@ const Map = React.memo(({ characters, drawRoute }) => {
               route.coordinates[0],
               route.coordinates[route.coordinates.length - 1]
             ],
-            { padding: 70 }
+            { padding: 75 }
           );
         });
       }
