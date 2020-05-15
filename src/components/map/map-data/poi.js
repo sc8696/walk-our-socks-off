@@ -221,7 +221,7 @@ export default {
               image: {
                 url: "place-images/ConcreteCows.jpg",
                 description:
-                  "Liz Leyh's 'Concrete Cows' in Milton Keynes. Six lifesize concrete cows, three full grown and three calves, stand in a grassy meadow. The cows look like black and white friesian dairy cattle.",
+                  "Liz Leyh's 'Concrete Cows'. Six lifesize concrete cows, three full grown and three calves, stand in a grassy meadow. The cows look like black and white friesian dairy cattle.",
                 attribution:
                   "User:Concrete Cowboy / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)"
               }

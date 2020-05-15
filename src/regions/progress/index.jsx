@@ -30,7 +30,7 @@ const Progress = () => {
       >
         <div className={styles.meters}>
           {Object.values(progress).map((character, index) => {
-            const descriptionText = `${character.name} has walked ${character.totalSteps} steps, and a total of ${character.distanceTravelled} kilometers. She has ${character.distanceToTravel} kilometers to go`;
+            const descriptionText = `${character.name} has walked ${character.totalSteps} steps, and a total of ${character.distanceTravelled} kilometres. She has ${character.distanceToTravel} kilometres to go`;
             return (
               <ProgressMeter
                 key={index}

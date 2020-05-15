@@ -15,3 +15,10 @@
   max-width: $max-content-width-narrow;
   width: 100%;
 }
+
+@include mobile {
+  .progress {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

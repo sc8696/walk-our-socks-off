@@ -57,8 +57,6 @@
     }
 
     dt {
-      font-size: font-sizes(2);
-
       will-change: transform, opacity;
     }
 
@@ -90,16 +88,36 @@
 }
 
 @include mobile {
+  .heading {
+    margin-bottom: spacing();
+    padding: 0 spacing();
+  }
+  .progressBar {
+    margin-bottom: spacing();
+  }
   .progressTitle {
     margin-bottom: 0;
     font-size: font-size(6);
   }
   .stats {
-    padding: 0;
+    padding: 0 spacing();
     dl {
       dd {
         margin-bottom: 0;
-        font-size: font-size(7);
+        font-size: font-size(5);
+      }
+    }
+  }
+}
+
+@include mobile-narrow {
+  .stats {
+    dl {
+      dt {
+        font-size: 12px;
+      }
+      dd {
+        font-size: font-size(4);
       }
     }
   }

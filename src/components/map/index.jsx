@@ -33,7 +33,7 @@ const customMapStyle = {
       maxzoom: 22
     }
   ],
-  zoom: 6
+  zoom: 10
 };
 
 const setupMap = element => {
@@ -133,7 +133,7 @@ const Map = React.memo(({ characters, drawRoute }) => {
               startMarkerClass: styles.startMarker,
               characterMarkerClass: styles.characterMarker
             }
-          ).initialise();
+          );
           m.once("moveend", () => {
             setMapCanvas(mc);
           });
@@ -152,40 +152,40 @@ const Map = React.memo(({ characters, drawRoute }) => {
 
   useEffect(() => {
     if (mapCanvas && drawRoute) {
-      mapCanvas.animate(
-        {
-          stepDistance: 0.333
-        },
-        characterOneMarker => {
-          const popup = new mapboxgl.Popup({
-            closeOnClick: false,
-            offset: 30,
-            className: styles.endPointPopup,
-            anchor: "top"
-          }).setHTML(renderToString(characterOneEndPointPopup));
-          characterOneMarker.setPopup(popup);
-          popup.addTo(map);
-        },
-        characterTwoMarker => {
-          const popup = new mapboxgl.Popup({
-            closeOnClick: false,
-            offset: 30,
-            className: styles.endPointPopup,
-            anchor: "bottom"
-          }).setHTML(renderToString(characterTwoEndPointPopup));
-          characterTwoMarker.setPopup(popup);
-          popup.addTo(map);
-        }
-      );
+      /** Place the markers, let them pop in, then start drawing them */
+      mapCanvas.initialise();
+      setTimeout(() => {
+        mapCanvas.animate(
+          {
+            stepDistance: 0.333
+          },
+          characterOneMarker => {
+            const popup = new mapboxgl.Popup({
+              closeOnClick: false,
+              offset: 30,
+              className: styles.endPointPopup,
+              anchor: "top"
+            }).setHTML(renderToString(characterOneEndPointPopup));
+            characterOneMarker.setPopup(popup);
+            popup.addTo(map);
+          },
+          characterTwoMarker => {
+            const popup = new mapboxgl.Popup({
+              closeOnClick: false,
+              offset: 30,
+              className: styles.endPointPopup,
+              anchor: "bottom"
+            }).setHTML(renderToString(characterTwoEndPointPopup));
+            characterTwoMarker.setPopup(popup);
+            popup.addTo(map);
+          }
+        );
+      }, 666);
     }
   }, [mapCanvas, drawRoute]);
 
   return (
     <>
-      <link
-        href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css"
-        rel="stylesheet"
-      />
       <figure
         className={styles.mapContainer}
         aria-describedby={mapDescriptionUUID}
