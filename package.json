@@ -23,6 +23,7 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
+    "@turf/turf": "^5.1.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.2",
@@ -33,7 +34,6 @@
     "mapbox-gl": "^1.10.0",
     "prettier": "2.0.5",
     "rc-progress": "^2.5.3",
-    "react-mapbox-gl": "^4.8.3",
     "react-visibility-sensor": "^5.1.1",
     "sass-variable-loader": "^0.1.2"
   },

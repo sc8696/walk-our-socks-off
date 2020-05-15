@@ -4,7 +4,7 @@ import { App } from "../../config/config";
 import Region from "../../components/region";
 import VisibilitySensor from "react-visibility-sensor";
 import classnames from "classnames";
-import styles from "./route.module.scss";
+import styles from "./how.module.scss";
 
 const How = () => {
   const [isVisible, setIsVisible] = useState(false);
