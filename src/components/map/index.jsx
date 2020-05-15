@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { along, nearestPoint } from "@turf/turf";
 
+import Link from "../link";
 import { MapCanvas } from "./map-canvas";
 import MapIcon from "./../../images/map.svg";
 import PropTypes from "prop-types";
@@ -52,8 +53,10 @@ const getEndpointDescription = (person, endPlace) => {
   return (
     <>
       On her virtual journey {person.name} would now be near{" "}
-      <a href={endPlace.properties.link}>{endPlace.properties.placeName}</a>,{" "}
-      {person.distanceTravelled} kilometers from her start point in{" "}
+      <Link href={endPlace.properties.link}>
+        {endPlace.properties.placeName}
+      </Link>
+      , {person.distanceTravelled} kilometres from her start point in{" "}
       {person.home}
     </>
   );

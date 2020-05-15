@@ -2,7 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `We're walking our socks off!`,
     description: `Lucy and Sarah are walking their socks off for Guide Dogs!`,
-    author: `@`
+    author: `@`,
+    url: "https://www.walkoursocksoff.co.uk",
+    image: "/images/ogimage.png"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,6 +36,12 @@ module.exports = {
         theme_color: `#FFDF7F`,
         display: `minimal-ui`,
         icon: `src/icons/favicon.png` // This path is relative to the root of the site.
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-166834854-1"
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -77,10 +77,12 @@ function getStartLabel(character, point, startMarkerClass, style = {}) {
 
 function getMarker(character, point, className) {
   const avatar = document.createElement("div");
+  const transitionContainer = document.createElement("div");
   avatar.className = className;
   avatar.innerHTML = renderToString(character.marker);
+  transitionContainer.append(avatar);
 
-  return new mapboxgl.Marker(avatar).setLngLat(point);
+  return new mapboxgl.Marker(transitionContainer).setLngLat(point);
 }
 
 /**
