@@ -9,3 +9,18 @@
     font-size: $max-heading-size - 0.6 * ($i - 1);
   }
 }
+
+@include mobile {
+  @for $i from 1 through length($headings) {
+    #{nth($headings, $i)} {
+      font-size: $max-heading-size - 0.6 * $i;
+    }
+  }
+}
+@include mobile-narrow {
+  @for $i from 1 through length($headings) {
+    #{nth($headings, $i)} {
+      font-size: $max-heading-size - 0.6 * $i * 0.8;
+    }
+  }
+}
