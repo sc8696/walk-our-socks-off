@@ -20,7 +20,7 @@ const Route = () => {
     <VisibilitySensor
       active={!isVisible}
       onChange={v => setIsVisible(v)}
-      minTopValue={300}
+      minTopValue={500}
       partialVisibility
       scrollThrottle={App.scrollThrottle}
     >
@@ -30,9 +30,9 @@ const Route = () => {
             Follow us <span className={"unemph"}>on our virtual route</span>
           </h2>
         </header>
-        <figure className={styles.mapContainer}>
+        <div className={styles.mapContainer}>
           <Map characters={progress} drawRoute={isLoaded && isVisible} />
-        </figure>
+        </div>
       </Region>
     </VisibilitySensor>
   );

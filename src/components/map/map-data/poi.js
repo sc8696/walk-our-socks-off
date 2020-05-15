@@ -15,8 +15,7 @@ export default {
               placeName: "Cheltenham",
               link: "https://en.wikipedia.org/wiki/Cheltenham",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/5/51/Cheltenham_Municiapl_Offices.jpg",
+                url: "place-images/Cheltenham_Municiapl_Offices.jpg",
                 description:
                   "Cheltenham's Municipal Offices, an example of Regency architecture",
                 attribution:
@@ -31,8 +30,7 @@ export default {
               placeName: "Clacton-on-Sea",
               link: "https://en.wikipedia.org/wiki/Clacton-on-Sea",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/3/39/Clacton-on-Sea_West-Beach.jpg",
+                url: "place-images/Clacton-on-Sea_West-Beach.jpg",
                 description: "Sand of the West Beach in Clacton-on-Sea.",
                 attribution:
                   "By Romazur - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=34504026"
@@ -45,8 +43,7 @@ export default {
               placeName: "Stow-on-the-Wold",
               link: "https://en.wikipedia.org/wiki/Stow-on-the-Wold",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/c/ce/Market_Square_-_Stow_on_the_Wold.jpg",
+                url: "place-images/Market_Square_-_Stow_on_the_Wold.jpg",
                 description: "Market Square in Stow-on-the-World",
                 attribution:
                   "Bs0u10e01 / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
@@ -64,7 +61,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Chipping_Norton",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/6/60/Bliss_Mill_from_Worcester_Road_-_geograph.org.uk_-_329977.jpg",
+                  "place-images/Bliss_Mill_from_Worcester_Road_-_geograph.org.uk_-_329977.jpg",
                 description: "Bliss Mill on the outskirts of Chipping Norton",
                 attribution: "Rob Farrow / Bliss Mill from Worcester Road"
               }
@@ -80,8 +77,7 @@ export default {
               placeName: "Deddington",
               link: "https://en.wikipedia.org/wiki/Deddington",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/2/2a/Deddington_MarketPlace_NorthBlock.jpg",
+                url: "place-images/Deddington_MarketPlace_NorthBlock.jpg",
                 description:
                   "Houses and shops at the north end of Market Place, Deddington, Oxfordshire, seen from the southwest. Behind the houses is the 17th-century west tower of the parish church of SS Peter and Paul.",
                 attribution:
@@ -100,7 +96,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Swerford",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/b/b6/St_Mary%27s_Church%2C_Swerford_-_geograph.org.uk_-_238406.jpg",
+                  "place-images/St_Mary%27s_Church%2C_Swerford_-_geograph.org.uk_-_238406.jpg",
                 description:
                   "St Mary's parish church, Swerford, Oxfordshire, seen from the southwest",
                 attribution: "David Stowell / St Mary&#039;s Church, Swerford"
@@ -118,7 +114,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/RAF_Croughton",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/5/51/RAF_Croughton_-_geograph.org.uk_-_464357.jpg",
+                  "place-images/RAF_Croughton_-_geograph.org.uk_-_464357.jpg",
                 description:
                   "Looking through the entrance to RAF Croughton, giant satellite dish in front of fenced off buildings",
                 attribution: "David Luther Thomas / RAF Croughton"
@@ -137,7 +133,7 @@ export default {
                 "https://en.wikipedia.org/wiki/Brockhampton,_Gloucestershire",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/2/2d/Brockhampton_Park_%28geograph_4228555%29.jpg",
+                  "place-images/Brockhampton_Park_%28geograph_4228555%29.jpg",
                 description: "Brockhampton Park",
                 attribution: "Derek Harper / Brockhampton Park"
               }
@@ -153,8 +149,7 @@ export default {
               placeName: "Guiting Power",
               link: "https://en.wikipedia.org/wiki/Guiting_Power",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/b/b4/Farmers_Arms_Guiting_Power_Stevage.jpeg",
+                url: "place-images/Farmers_Arms_Guiting_Power_Stevage.jpeg",
                 description:
                   "The Farmer's Arms, a pub in Guiting Power; the other pub is the Hollow Bottom.",
                 attribution:
@@ -173,7 +168,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Naunton",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/3/37/HouseInNaunton%28PhilipHalling%29May2006.jpg",
+                  "place-images/HouseInNaunton%28PhilipHalling%29May2006.jpg",
                 description: "A house in Naunton",
                 attribution: "Philip Halling / House in Naunton"
               }
@@ -190,7 +185,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Daylesford,_Gloucestershire",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/8/80/St_Peters_Church_Daylesford_-_geograph.org.uk_-_1100644.jpg",
+                  "place-images/St_Peters_Church_Daylesford_-_geograph.org.uk_-_1100644.jpg",
                 description: "St Peters Church Daylesford",
                 attribution: "Graham Burnett / St Peters Church Daylesford"
               }
@@ -206,8 +201,7 @@ export default {
               placeName: "Buckingham",
               link: "https://en.wikipedia.org/wiki/Buckingham",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/f/f2/Buckingham_OldCountyGaol02.JPG",
+                url: "place-images/Buckingham_OldCountyGaol02.JPG",
                 description:
                   "Old County Gaol in Buckingham, built in 1748. It is now the Buckingham Old Gaol Museum. The yellow stone gaol dominates a cloudy blue sky on a summer's day. The gaol has two large towers either side, with two smaller turrets framing the large stone arched doorway.",
                 attribution:
@@ -225,8 +219,7 @@ export default {
               placeName: "Milton Keynes",
               link: "https://en.wikipedia.org/wiki/Milton_Keynes",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/f/f4/ConcreteCows.jpg",
+                url: "place-images/ConcreteCows.jpg",
                 description:
                   "Liz Leyh's 'Concrete Cows' in Milton Keynes. Six lifesize concrete cows, three full grown and three calves, stand in a grassy meadow. The cows look like black and white friesian dairy cattle.",
                 attribution:
@@ -244,10 +237,9 @@ export default {
               placeName: "Bletchley",
               link: "https://en.wikipedia.org/wiki/Bletchley",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/6/6e/Bletchley_Park.jpg",
+                url: "place-images/Bletchley_Park.jpg",
                 description:
-                  "Bletchley Park mansion. A huge red bricked building, with yellow stone bay windows, and a green dome roof on the left most wing. Bletchley Park was the place where Enigma messages were cracked during the World War 2.",
+                  "Bletchley Park mansion. A huge red bricked building, with yellow stone bay windows, and a green dome roof on the left most wing.",
                 attribution: "Matt Crypto / Public domain"
               }
             },
@@ -262,8 +254,7 @@ export default {
               placeName: "Woburn Safari Park",
               link: "https://en.wikipedia.org/wiki/Woburn_Safari_Park",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/4/4c/Rhino_on_the_Road_Safari.jpg",
+                url: "place-images/Rhino_on_the_Road_Safari.jpg",
                 description:
                   "Southern White Rhino in the African Savannah reserve of Woburn Safari Park",
                 attribution:
@@ -282,7 +273,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Stevenage",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/a/ab/Stevenage_Town_Centre_and_Joyride_statue.jpg",
+                  "place-images/Stevenage_Town_Centre_and_Joyride_statue.jpg",
                 description:
                   "Stevenage Town Centre featuring the iconic Clock Tower and fountain and the Franta Belsky 'Joyride' Statue",
                 attribution:
@@ -300,8 +291,7 @@ export default {
               placeName: "Buntingford",
               link: "https://en.wikipedia.org/wiki/Buntingford",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/5/5d/Buntingford_1.jpg",
+                url: "place-images/Buntingford_1.jpg",
                 description: "Buntingford in Hertfordshire",
                 attribution:
                   "Traveler100 / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)"
@@ -319,7 +309,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Bishop%27s_Stortford",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/5/5c/Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg",
+                  "place-images/Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg",
                 description:
                   "Waytemore Castle, Bishop' s Stortford This large earth mound is all that remains of the castle.",
                 attribution:
@@ -338,7 +328,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Great_Dunmow",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/a/a6/Doctors_Pond_in_Great_Dunmow_-_geograph.org.uk_-_1386029.jpg",
+                  "place-images/Doctors_Pond_in_Great_Dunmow_-_geograph.org.uk_-_1386029.jpg",
                 description:
                   " Doctors Pond in Great Dunmow It is thought that the doctors used to keep their supply of leeches in the doctors pond.",
                 attribution:
@@ -357,7 +347,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Braintree,_Essex",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/3/37/Braintree_Town_Hall_Centre%2C_Fairfield_Road%2C_Braintree_-_geograph.org.uk_-_59709.jpg",
+                  "place-images/Braintree_Town_Hall_Centre%2C_Fairfield_Road%2C_Braintree_-_geograph.org.uk_-_59709.jpg",
                 description:
                   "Braintree Town Hall Centre, Fairfield Road, Braintree. Given as a gift to the town by the Courtauld family, this Grade II* listed building with its rich wood-panelled interior, houses the Tourist Information Centre and Art Gallery.",
                 attribution:
@@ -375,8 +365,7 @@ export default {
               placeName: "Coggeshall",
               link: "https://en.wikipedia.org/wiki/Coggeshall",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/e/e2/Coggeshall_Sign.jpg",
+                url: "place-images/Coggeshall_Sign.jpg",
                 description:
                   "The town's sign depicts a Cistercian farming sheep at the abbey. On the other side is a weaver by his loom.",
                 attribution:
@@ -394,8 +383,7 @@ export default {
               placeName: "Colchester",
               link: "https://en.wikipedia.org/wiki/Colchester",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/2/2a/Colchester_Castle%2C_2016.jpg",
+                url: "place-images/Colchester_Castle%2C_2016.jpg",
                 description: "Colchester Castle, completed c.1100 AD",
                 attribution:
                   "Alexis Ip / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
@@ -413,7 +401,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Alresford,_Essex",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/1/19/Ruins_of_St_Peter%27s_Church_-_geograph.org.uk_-_122735.jpg",
+                  "place-images/Ruins_of_St_Peter%27s_Church_-_geograph.org.uk_-_122735.jpg",
                 description: "Ruins of St Peter's Church",
                 attribution:
                   "Roger W Haworth / CC BY-SA (https://creativecommons.org/licenses/by-sa/2.0)"
@@ -430,8 +418,7 @@ export default {
               placeName: "Brightlingsea",
               link: "https://en.wikipedia.org/wiki/Brightlingsea",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/e/ec/Brightlingsea_Harbour.jpg",
+                url: "place-images/Brightlingsea_Harbour.jpg",
                 description: "A view of Brightlingsea harbour",
                 attribution:
                   "DavidDjJohnson at English Wikipedia / CC BY (https://creativecommons.org/licenses/by/3.0)"
@@ -449,7 +436,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/St_Osyth",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/3/36/The_Priory_in_St_Osyth_-_geograph.org.uk_-_8601.jpg",
+                  "place-images/The_Priory_in_St_Osyth_-_geograph.org.uk_-_8601.jpg",
                 description: "The Priory in St Osyth",
                 attribution: "Stephen Dawson / The Priory in St Osyth"
               }
@@ -465,8 +452,7 @@ export default {
               placeName: "Wivenhoe",
               link: "https://en.wikipedia.org/wiki/Wivenhoe",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/5/5e/Wivenhoe_morning.jpg",
+                url: "place-images/Wivenhoe_morning.jpg",
                 description: "View of Wivenhoe in the early morning",
                 attribution:
                   "Alexis Ip / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
@@ -483,8 +469,7 @@ export default {
               placeName: "Colchester",
               link: "https://en.wikipedia.org/wiki/Colchester",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/2/2a/Colchester_Castle%2C_2016.jpg",
+                url: "place-images/Colchester_Castle%2C_2016.jpg",
                 description: "Colchester Castle, completed c.1100 AD",
                 attribution:
                   "Alexis Ip / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
@@ -502,7 +487,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Stevenage",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/a/ab/Stevenage_Town_Centre_and_Joyride_statue.jpg",
+                  "place-images/Stevenage_Town_Centre_and_Joyride_statue.jpg",
                 description:
                   "Stevenage Town Centre featuring the iconic Clock Tower and fountain and the Franta Belsky 'Joyride' Statue",
                 attribution:
@@ -520,8 +505,7 @@ export default {
               placeName: "Hatfield Forest",
               link: "https://en.wikipedia.org/wiki/Hatfield_Forest",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/4/42/Hatfield_Forest_1.png",
+                url: "place-images/Hatfield_Forest_1.png",
                 description: "Hatfield Forest",
                 attribution:
                   "RicDod / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)"
@@ -538,8 +522,7 @@ export default {
               placeName: "Buckingham",
               link: "https://en.wikipedia.org/wiki/Buckingham",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/f/f2/Buckingham_OldCountyGaol02.JPG",
+                url: "place-images/Buckingham_OldCountyGaol02.JPG",
                 description:
                   "Old County Gaol in Buckingham, built 1748. It is now the Buckingham Old Gaol Museum.",
                 attribution:
@@ -557,8 +540,7 @@ export default {
               placeName: "Buckingham",
               link: "https://en.wikipedia.org/wiki/Buckingham",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/f/f2/Buckingham_OldCountyGaol02.JPG",
+                url: "place-images/Buckingham_OldCountyGaol02.JPG",
                 description:
                   "Old County Gaol in Buckingham, built in 1748. It is now the Buckingham Old Gaol Museum. The yellow stone gaol dominates a cloudy blue sky on a summer's day. The gaol has two large towers either side, with two smaller turrets framing the large stone arched doorway.",
                 attribution:
@@ -576,8 +558,7 @@ export default {
               placeName: "the Chiltern Hills",
               link: "https://en.wikipedia.org/wiki/Chiltern_Hills",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/c/ca/Ivinghoe_Beacon_seen_from_The_Ridgeway.jpg",
+                url: "place-images/Ivinghoe_Beacon_seen_from_The_Ridgeway.jpg",
                 description:
                   "Ivinghoe Beacon seen looking north from The Ridgeway. In the foreground dark yellow grass or wheat blows in the wind, the hill slopes down to a lush and green grassy bowl, a small thicket of trees where they the slope meets the clearing. Beyond the Beacon rises up, a white path heading straight to it's top.",
                 attribution:
@@ -595,8 +576,7 @@ export default {
               placeName: "the Chiltern Hills",
               link: "https://en.wikipedia.org/wiki/Chiltern_Hills",
               image: {
-                url:
-                  "https://upload.wikimedia.org/wikipedia/commons/c/ca/Ivinghoe_Beacon_seen_from_The_Ridgeway.jpg",
+                url: "place-images/Ivinghoe_Beacon_seen_from_The_Ridgeway.jpg",
                 description:
                   "Ivinghoe Beacon seen looking north from The Ridgeway.",
                 attribution:
@@ -615,7 +595,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Hitchin",
               image: {
                 url:
-                  "https://upload.wikimedia.org/wikipedia/commons/c/cc/St_Mary%27s_Church%2C_Hitchin_-_geograph.org.uk_-_989830.jpg",
+                  "place-images/St_Mary%27s_Church%2C_Hitchin_-_geograph.org.uk_-_989830.jpg",
                 description:
                   "St Mary's Church, Hitchin. An early evening view from the town square. Black and white Tudor fronted buildings line the cobbled square, they have glowing yellow lights inside. The church with it's spire and clocktower rise up just beyond the square.",
                 attribution:

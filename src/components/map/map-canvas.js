@@ -1,9 +1,7 @@
-import { along, lineString, reverse } from "@turf/turf";
+import { along, lineString } from "@turf/turf";
 
 import mapboxgl from "mapbox-gl";
-
 import { noop } from "lodash";
-
 import { renderToString } from "react-dom/server";
 
 function precalcAnimationSteps(route, routeLength, stepDistance) {
@@ -77,9 +75,9 @@ function getStartLabel(character, point, startMarkerClass, style = {}) {
   return marker.setLngLat(point);
 }
 
-function getMarker(character, point) {
+function getMarker(character, point, className) {
   const avatar = document.createElement("div");
-  avatar.className = "marker";
+  avatar.className = className;
   avatar.innerHTML = renderToString(character.marker);
 
   return new mapboxgl.Marker(avatar).setLngLat(point);
@@ -95,7 +93,7 @@ export class MapCanvas {
   constructor(
     map,
     { characterOne, characterTwo, route, places } = {},
-    { startMarkerClass } = {}
+    classNames
   ) {
     this.map = map;
     this.route = route;
@@ -103,9 +101,13 @@ export class MapCanvas {
       ...this.route,
       coordinates: [...this.route.coordinates].reverse()
     };
+    this.classNames = classNames;
     this.places = places;
     this.characterOne = characterOne;
     this.characterTwo = characterTwo;
+    this.characterFrameTimer = {};
+    this.targetFrameRate = 60;
+    this.targetFrameTime = (1000 / 60) * (60 / this.targetFrameRate);
     const startPoint = route.coordinates[0];
     const endPoint = route.coordinates[route.coordinates.length - 1];
     const characterList = [characterOne, characterTwo];
@@ -116,99 +118,126 @@ export class MapCanvas {
 
     characterList.forEach((character, idx) => {
       const point = idx === 0 ? startPoint : endPoint;
-      getStartLabel(character, point, startMarkerClass, {
+      getStartLabel(character, point, classNames.startMarkerClass, {
         backgroundColor: character.colour,
         transform: idx === 0 ? "translateY(-100%)" : "translateY(100%)"
       }).addTo(this.map);
     });
   }
-  drawAnimatedRouteAndMarker(frameSet, marker, id) {
-    requestAnimationFrame(() => {
-      this.animateMarker(id, 1, frameSet, marker, [], frameSet.length - 1);
+  _drawAnimatedRouteAndMarker(frameSet, marker, id, onFinish) {
+    requestAnimationFrame(timestamp => {
+      this.characterFrameTimer[id] = timestamp;
+      this._animateMarker(
+        timestamp,
+        id,
+        0,
+        frameSet,
+        marker,
+        [],
+        frameSet.length - 1,
+        onFinish
+      );
     });
   }
 
   // update the route data the specified distance along the line
-  drawRouteProgress(lineSegment, id) {
+  _drawRouteProgress(lineSegment, id) {
     this.map.getSource(id).setData(lineSegment);
   }
 
-  animateMarker(
+  _animateMarker(
+    time,
     id,
     frameNumber,
     frameSet,
     marker,
     lineSegment,
-    endFrameNumber
+    finalFrameNumber,
+    onFinish
   ) {
-    const thisPoint = frameSet[frameNumber].geometry.coordinates;
-    marker.setLngLat(thisPoint);
+    const lastFrameTime = time - this.characterFrameTimer[id];
+    const framesToSkip = Math.ceil(lastFrameTime / this.targetFrameTime);
+    const nextFrameNumber = frameNumber + framesToSkip;
+    const nextFrame = timestamp =>
+      this._animateMarker(
+        timestamp,
+        id,
+        nextFrameNumber,
+        frameSet,
+        marker,
+        lineSegment,
+        finalFrameNumber,
+        onFinish
+      );
 
-    lineSegment.push(thisPoint);
-    if (lineSegment.length > 1) {
-      this.drawRouteProgress(lineString(lineSegment), id);
-    }
+    this.characterFrameTimer[id] = time;
+    const thisPoint = frameSet[nextFrameNumber]?.geometry?.coordinates ?? null;
 
-    // Request the next frame of the animation until distance is reached
-    if (frameNumber < endFrameNumber) {
-      requestAnimationFrame(() => {
-        this.animateMarker(
-          id,
-          ++frameNumber,
-          frameSet,
-          marker,
-          lineSegment,
-          endFrameNumber
-        );
-      });
+    if (nextFrameNumber <= finalFrameNumber) {
+      marker.setLngLat(thisPoint);
+
+      lineSegment.push(thisPoint);
+      if (lineSegment.length > 1) {
+        this._drawRouteProgress(lineString(lineSegment), id);
+      }
+
+      if (thisPoint) {
+        // Request the next frame of the animation until distance is reached
+        requestAnimationFrame(nextFrame);
+      }
+    } else {
+      onFinish(marker);
     }
   }
 
+  initialise() {
+    this.characterOneMarker = getMarker(
+      this.characterOne,
+      this.route.coordinates[0],
+      this.classNames.characterMarkerClass
+    ).addTo(this.map);
+    this.characterTwoMarker = getMarker(
+      this.characterTwo,
+      this.reversedRoute.coordinates[0],
+      this.classNames.characterMarkerClass
+    ).addTo(this.map);
+    return this;
+  }
+
   animate(
-    { stepDistance = 1 } = {},
+    { stepDistance = 0.1 } = {},
     onCharacterOneFinish = noop,
     onCharacterTwoFinish = noop
   ) {
-    /** Animate in to the bounds */
-    this.map.fitBounds(this.bounds, { padding: 50 });
-
-    this.routeSteps = this.route.coordinates.map((step, idx) =>
-      along(this.route, idx * 0.15, {
-        units: "kilometers"
-      })
-    );
-
-    const characterOneMarker = getMarker(
-      this.characterOne,
-      this.route.coordinates[0]
-    ).addTo(this.map);
-    const characterTwoMarker = getMarker(
-      this.characterTwo,
-      this.reversedRoute.coordinates[0]
-    ).addTo(this.map);
-
+    if (!this.characterOneMarker || !this.characterTwoMarker) {
+      this.initialise();
+    }
     const characterOneRouteFrames = precalcAnimationSteps(
       this.route,
       this.characterOne.distanceTravelled,
-      0.333
+      stepDistance
     );
     const characterTwoRouteFrames = precalcAnimationSteps(
       this.reversedRoute,
       this.characterTwo.distanceTravelled,
-      0.333
+      stepDistance
     );
 
-    // place markers for start labels
     // animate route progressing with marker for Sarah
-    this.drawAnimatedRouteAndMarker(
+    this._drawAnimatedRouteAndMarker(
       characterOneRouteFrames,
-      characterOneMarker,
-      this.characterOne.id
+      this.characterOneMarker,
+      this.characterOne.id,
+      onCharacterOneFinish
     );
-    this.drawAnimatedRouteAndMarker(
+
+    // animate route progressing with marker for Sarah
+    this._drawAnimatedRouteAndMarker(
       characterTwoRouteFrames,
-      characterTwoMarker,
-      this.characterTwo.id
+      this.characterTwoMarker,
+      this.characterTwo.id,
+      onCharacterTwoFinish
     );
+    return this;
   }
 }

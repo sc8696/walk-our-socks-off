@@ -5,9 +5,10 @@
 
 body,
 html {
-  overflow-x: hidden;
   min-width: 320px;
   width: 100%;
+
+  scroll-snap-type: y proximity;
 }
 
 body {
