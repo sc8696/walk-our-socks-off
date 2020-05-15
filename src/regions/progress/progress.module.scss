@@ -18,7 +18,7 @@
 
 @include mobile {
   .progress {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: spacing(0.5);
+    padding-left: spacing(0.5);
   }
 }

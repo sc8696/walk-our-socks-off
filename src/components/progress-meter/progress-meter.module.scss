@@ -90,17 +90,18 @@
 @include mobile {
   .heading {
     margin-bottom: spacing();
-    padding: 0 spacing();
   }
   .progressBar {
     margin-bottom: spacing();
+    width: calc(100% - #{spacing(1)});
+    height: 15px;
   }
   .progressTitle {
     margin-bottom: 0;
     font-size: font-size(6);
   }
   .stats {
-    padding: 0 spacing();
+    padding: 0;
     dl {
       dd {
         margin-bottom: 0;
