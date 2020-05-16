@@ -79,7 +79,7 @@ export default {
               image: {
                 url: "place-images/Deddington_MarketPlace_NorthBlock.jpg",
                 description:
-                  "Houses and shops at the north end of Market Place, Deddington, Oxfordshire, seen from the southwest. Behind the houses is the 17th-century west tower of the parish church of SS Peter and Paul.",
+                  "Houses and shops at the north end of Market Place in Deddington, seen from the southwest. Behind the houses is the 17th-century west tower of the parish church of SS Peter and Paul.",
                 attribution:
                   "Motacilla / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
               }
@@ -115,8 +115,9 @@ export default {
               image: {
                 url:
                   "place-images/RAF_Croughton_-_geograph.org.uk_-_464357.jpg",
+                title: "",
                 description:
-                  "Looking through the entrance to RAF Croughton, giant satellite dish in front of fenced off buildings",
+                  "the entrance to RAF Croughton with it's giant satellite dish in front of fenced off buildings",
                 attribution: "David Luther Thomas / RAF Croughton"
               }
             },
@@ -186,7 +187,9 @@ export default {
               image: {
                 url:
                   "place-images/St_Peters_Church_Daylesford_-_geograph.org.uk_-_1100644.jpg",
-                description: "St Peters Church Daylesford",
+                title: "St Peters Church",
+                description:
+                  "St Peters Church, a tiny yellow stone church with square steeple, nestled amongst ivy covered Cotswold stone cottages.",
                 attribution: "Graham Burnett / St Peters Church Daylesford"
               }
             },
@@ -202,8 +205,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Buckingham",
               image: {
                 url: "place-images/Buckingham_OldCountyGaol02.JPG",
+                title: "The old County Jail in Buckingham",
                 description:
-                  "Old County Gaol in Buckingham, built in 1748. It is now the Buckingham Old Gaol Museum. The yellow stone gaol dominates a cloudy blue sky on a summer's day. The gaol has two large towers either side, with two smaller turrets framing the large stone arched doorway.",
+                  "The old County Jail in Buckingham, built in 1748. It is now the Buckingham Old Jail Museum. The yellow stone jail dominates the sky, it has two large towers either side, with two smaller turrets framing the large stone arched doorway.",
                 attribution:
                   "Chris Nyborg / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)"
               }
@@ -220,6 +224,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Milton_Keynes",
               image: {
                 url: "place-images/ConcreteCows.jpg",
+                title: "Liz Leyh's 'Concrete Cows'",
                 description:
                   "Liz Leyh's 'Concrete Cows'. Six lifesize concrete cows, three full grown and three calves, stand in a grassy meadow. The cows look like black and white friesian dairy cattle.",
                 attribution:
@@ -238,6 +243,7 @@ export default {
               link: "https://en.wikipedia.org/wiki/Bletchley",
               image: {
                 url: "place-images/Bletchley_Park.jpg",
+                title: "Bletchley Park mansion",
                 description:
                   "Bletchley Park mansion. A huge red bricked building, with yellow stone bay windows, and a green dome roof on the left most wing.",
                 attribution: "Matt Crypto / Public domain"
@@ -255,8 +261,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Woburn_Safari_Park",
               image: {
                 url: "place-images/Rhino_on_the_Road_Safari.jpg",
+                title: "Southern White Rhino in the African Savannah reserve",
                 description:
-                  "Southern White Rhino in the African Savannah reserve of Woburn Safari Park",
+                  "A Southern White Rhino in the African Savannah reserve of Woburn Safari Park",
                 attribution:
                   "Debdeb12 / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
               }
@@ -560,7 +567,7 @@ export default {
               image: {
                 url: "place-images/Ivinghoe_Beacon_seen_from_The_Ridgeway.jpg",
                 description:
-                  "Ivinghoe Beacon seen looking north from The Ridgeway. In the foreground dark yellow grass or wheat blows in the wind, the hill slopes down to a lush and green grassy bowl, a small thicket of trees where they the slope meets the clearing. Beyond the Beacon rises up, a white path heading straight to it's top.",
+                  "Ivinghoe Beacon. On the approach dark yellow grass or wheat blows in the wind, the hill slopes down to a lush and green grassy bowl, a small thicket of trees where they the slope meets the clearing. Beyond the Beacon rises up, a white path heading straight to it's top.",
                 attribution:
                   "Pointillist / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)"
               }
