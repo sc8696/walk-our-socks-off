@@ -72,7 +72,10 @@ const getEndPointPopup = (person, endPlace) => {
         <img
           src={image.url}
           alt={`Here, she might see ${image.description}`}
-          title={`A view from ${properties.placeName}\n\n${image.attribution}`}
+          title={`A view from ${properties.placeName} ${
+            image.title ? `- ${image.title}` : ""
+          }
+           \n\n${image.attribution}`}
         />
       </div>
     </div>
