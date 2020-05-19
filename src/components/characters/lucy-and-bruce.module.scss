@@ -1,21 +1,23 @@
 @import "./../../styles/tools.scss";
+@import "./character.module.scss";
 
 .lucyAndBruce {
-  position: relative;
-  display: flex;
-  width: 100%;
-  [class="bruce"] {
-    position: relative;
-    top: 140px;
-    left: 70px;
-    animation: animate(fade-in-from-right, $delay: 500ms);
+  .bruce {
+    @extend .character;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    animation: animate(fade-in-from-right, $delay: 600ms);
 
     will-change: transform, opacity;
   }
-  [class="lucy"] {
+
+  .lucy {
+    @extend .character;
     position: relative;
-    z-index: 1;
-    animation: animate(fade-in-from-right, $delay: 566ms);
+    z-index: 2;
+    animation: animate(fade-in-from-right, $delay: 640ms);
 
     will-change: transform, opacity;
   }
@@ -24,10 +26,10 @@
 @keyframes fade-in-from-right {
   from {
     opacity: 0;
-    transform: translateX(33px);
+    transform: translateX(33px) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) translateZ(0);
   }
 }
