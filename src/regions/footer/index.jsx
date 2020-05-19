@@ -1,4 +1,5 @@
 import { Credits } from "../../config/config";
+import { Links } from "../../config/config";
 import Link from "../../components/link";
 import React from "react";
 import Region from "../../components/region";
@@ -12,16 +13,16 @@ const Footer = () => {
         <h3 className={styles.creditTitle}>
           Created by Sarah McIntyre &amp; Steve Cumming{" "}
         </h3>
-        <span>
-          In support of{" "}
+        <span className={styles.charityInfo}>
+          This site was made in support of{" "}
           <Link href={Credits.guideDogLink}>
             Guide Dogs for the Blind Association
-          </Link>
+          </Link>{" "}
+          (Charity Registration No. in England and Wales 209617 and Scotland
+          SC038979) as part of their{" "}
+          <Link href={Links.challenge.link}>Walk Your Socks Off Challenge</Link>
+          . This is not an official site of Guide Dogs UK.
         </span>
-        <address className={styles.charityInfo}>
-          Charity Registration No. in England and Wales 209617 and Scotland
-          SC038979
-        </address>
       </section>
 
       <section className={styles.credit}>

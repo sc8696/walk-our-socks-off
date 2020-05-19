@@ -15,9 +15,12 @@
 
 .charityInfo {
   font-style: normal;
+  line-height: 1.6;
 }
 
 .credit {
+  max-width: 800px;
+
   .creditTitle {
     margin-bottom: spacing(1.5);
     letter-spacing: 1px;
