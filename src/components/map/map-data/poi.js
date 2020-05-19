@@ -62,7 +62,9 @@ export default {
               image: {
                 url:
                   "place-images/Bliss_Mill_from_Worcester_Road_-_geograph.org.uk_-_329977.jpg",
-                description: "Bliss Mill on the outskirts of Chipping Norton",
+                title: "Bliss Mill on the outskirts of Chipping Norton",
+                description:
+                  "Bliss Mill on the outskirts of Chipping Norton. Nestled in the Cotswold hills, a large yellow stone building of the mill looks almost like a small castle with a huge chimney extending from one side, the four corners of the building each have square turrets",
                 attribution: "Rob Farrow / Bliss Mill from Worcester Road"
               }
             },
@@ -281,8 +283,10 @@ export default {
               image: {
                 url:
                   "place-images/Stevenage_Town_Centre_and_Joyride_statue.jpg",
+                title:
+                  "The Franta Belsky 'Joyride' statue and Stevenage clock tower",
                 description:
-                  "Stevenage Town Centre featuring the iconic Clock Tower and fountain and the Franta Belsky 'Joyride' Statue",
+                  "the Franta Belsky 'Joyride' bronze Statue that shows a woman carrying a child on her back, she's leaning forward as if to stop him falling off as he leans back.  In the square behind the statue is the iconic Clock Tower and fountain, an unusual square frame tower structure that house the clock above the fountain pool. The clock at the top and the fountain at the bottom are the only solid parts of the tower",
                 attribution:
                   "BWCSEB1989 / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
               }
@@ -495,8 +499,10 @@ export default {
               image: {
                 url:
                   "place-images/Stevenage_Town_Centre_and_Joyride_statue.jpg",
+                title:
+                  "The Franta Belsky 'Joyride' statue and Stevenage clock tower",
                 description:
-                  "Stevenage Town Centre featuring the iconic Clock Tower and fountain and the Franta Belsky 'Joyride' Statue",
+                  "the Franta Belsky 'Joyride' bronze Statue that shows a woman carrying a child on her back, she's leaning forward as if to stop him falling off as he leans back.  In the square behind the statue is the iconic Clock Tower and fountain, an unusual square frame tower structure that house the clock above the fountain pool. The clock at the top and the fountain at the bottom are the only solid parts of the tower",
                 attribution:
                   "BWCSEB1989 / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
               }
