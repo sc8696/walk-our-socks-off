@@ -12,9 +12,8 @@ const Progress = () => {
   const { progress } = useContext(ProgressContext) || {};
 
   const isLoaded =
-    (progress?.sarah?.timeline?.length ?? 0) +
-      (progress?.lucy?.timeline?.length ?? 0) >
-    0;
+    (progress?.get("sarah")?.timeline?.length ?? 0) > 0 &&
+    (progress?.get("lucy")?.timeline?.length ?? 0) > 0;
 
   return (
     <Region className={styles.progress}>
@@ -29,7 +28,7 @@ const Progress = () => {
         scrollThrottle={App.scrollThrottle}
       >
         <div className={styles.meters}>
-          {Object.values(progress).map((character, index) => {
+          {Array.from(progress.values()).map((character, index) => {
             const descriptionText = `${character.name} has walked ${character.totalSteps} steps, and a total of ${character.distanceTravelled} kilometres. She has ${character.distanceToTravel} kilometres to go`;
             return (
               <ProgressMeter

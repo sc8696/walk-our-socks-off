@@ -84,45 +84,53 @@ const getEndPointPopup = (person, endPlace) => {
 
 const mapDescriptionUUID = uuid();
 
-const Map = React.memo(({ characters, drawRoute }) => {
+const Map = React.memo(({ characters, isLoaded, drawRoute }) => {
   const [map, setMap] = useState(null);
   const [mapCanvas, setMapCanvas] = useState(null);
 
-  const mapElement = useRef(null);
-  const characterArray = Object.values(characters);
   const mapIsLoading = !map;
-  const characterOne = characterArray[0];
-  const characterTwo = characterArray[1];
-  const characterOneCurrentPoint = along(
-    route,
-    characterOne.distanceTravelled,
-    { units: "kilometers" }
-  );
-  const characterTwoCurrentPoint = along(
-    { ...route, coordinates: [...route.coordinates].reverse() },
-    characterTwo.distanceTravelled,
-    { units: "kilometers" }
-  );
-  const characterOneNearestPlace = nearestPoint(
-    characterOneCurrentPoint,
-    poi.places[0].data
-  );
-  const characterTwoNearestPlace = nearestPoint(
-    characterTwoCurrentPoint,
-    poi.places[0].data
-  );
+  const mapElement = useRef(null);
 
-  const characterOneEndPointPopup = getEndPointPopup(
-    characterOne,
-    characterOneNearestPlace
-  );
-  const characterTwoEndPointPopup = getEndPointPopup(
-    characterTwo,
-    characterTwoNearestPlace
-  );
+  let characterOneEndPointPopup;
+  let characterTwoEndPointPopup;
+  let characterOne;
+  let characterTwo;
+
+  if (isLoaded) {
+    const characterList = characters.values();
+    characterOne = characterList.next().value;
+    characterTwo = characterList.next().value;
+    const characterOneCurrentPoint = along(
+      route,
+      characterOne.distanceTravelled,
+      { units: "kilometers" }
+    );
+    const characterTwoCurrentPoint = along(
+      { ...route, coordinates: [...route.coordinates].reverse() },
+      characterTwo.distanceTravelled,
+      { units: "kilometers" }
+    );
+    const characterOneNearestPlace = nearestPoint(
+      characterOneCurrentPoint,
+      poi.places[0].data
+    );
+    const characterTwoNearestPlace = nearestPoint(
+      characterTwoCurrentPoint,
+      poi.places[0].data
+    );
+
+    characterOneEndPointPopup = getEndPointPopup(
+      characterOne,
+      characterOneNearestPlace
+    );
+    characterTwoEndPointPopup = getEndPointPopup(
+      characterTwo,
+      characterTwoNearestPlace
+    );
+  }
 
   useEffect(() => {
-    if (!map) {
+    if (!map && isLoaded) {
       if (mapElement.current) {
         const m = setupMap(mapElement.current);
         m.once("load", () => {
@@ -154,10 +162,10 @@ const Map = React.memo(({ characters, drawRoute }) => {
         });
       }
     }
-  }, [map]);
+  }, [map, isLoaded]);
 
   useEffect(() => {
-    if (mapCanvas && drawRoute) {
+    if (mapCanvas && isLoaded && drawRoute) {
       /** Place the markers, let them pop in, then start drawing them */
       mapCanvas.initialise();
       setTimeout(() => {
@@ -180,7 +188,7 @@ const Map = React.memo(({ characters, drawRoute }) => {
               closeOnClick: false,
               offset: 30,
               className: styles.endPointPopup,
-              anchor: "bottom"
+              anchor: "bottom-left"
             }).setHTML(renderToString(characterTwoEndPointPopup));
             characterTwoMarker.setPopup(popup);
             popup.addTo(map);
@@ -188,7 +196,7 @@ const Map = React.memo(({ characters, drawRoute }) => {
         );
       }, 666);
     }
-  }, [mapCanvas, drawRoute]);
+  }, [mapCanvas, isLoaded, drawRoute]);
 
   return (
     <>
@@ -223,6 +231,7 @@ const Map = React.memo(({ characters, drawRoute }) => {
 
 Map.propTypes = {
   characters: PropTypes.object,
+  isLoaded: PropTypes.bool,
   drawRoute: PropTypes.bool
 };
 

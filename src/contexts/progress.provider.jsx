@@ -21,8 +21,9 @@ const trimResults = ([...resultSet]) => {
 };
 
 const setCharacterProgress = (characterName, progress) => {
-  const character = characterList[characterName];
+  const character = characterList.get(characterName);
   character.setProgress(progress);
+  return character;
 };
 
 /**
@@ -36,11 +37,11 @@ export const ProgressProvider = ({ children }) => {
   const getProgress = () => {
     SheetReader(readerOptions, sarahResults => {
       setCharacterProgress("sarah", trimResults(sarahResults));
-      setProgress({ ...characterList });
+      setProgress(new Map(characterList));
     });
     SheetReader({ ...readerOptions, sheetNumber: 2 }, lucyResults => {
       setCharacterProgress("lucy", trimResults(lucyResults));
-      setProgress({ ...characterList });
+      setProgress(new Map(characterList));
     });
   };
 
