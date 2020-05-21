@@ -171,9 +171,11 @@ export default {
               link: "https://en.wikipedia.org/wiki/Naunton",
               image: {
                 url:
-                  "place-images/HouseInNaunton%28PhilipHalling%29May2006.jpg",
-                description: "A house in Naunton",
-                attribution: "Philip Halling / House in Naunton"
+                  "place-images/River_Windrush%2C_Naunton_-_geograph.org.uk_-_178001.jpg",
+                title: "River Windrush, Naunton",
+                description:
+                  "the River Windrush - as the river Windrush flows through Naunton, in places right alongside the houses, the village's main street is actually lower than the bed of the river",
+                attribution: "Philip Halling / River Windrush, Naunton"
               }
             },
             geometry: {
@@ -303,7 +305,8 @@ export default {
               link: "https://en.wikipedia.org/wiki/Buntingford",
               image: {
                 url: "place-images/Buntingford_1.jpg",
-                description: "Buntingford in Hertfordshire",
+                description:
+                  "a narrow high street with a mismatch mix of brick buildings and tudor facades",
                 attribution:
                   "Traveler100 / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)"
               }
