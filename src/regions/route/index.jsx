@@ -12,9 +12,8 @@ const Route = () => {
   const { progress } = useContext(ProgressContext) || {};
 
   const isLoaded =
-    (progress?.sarah?.timeline?.length ?? 0) +
-      (progress?.lucy?.timeline?.length ?? 0) >
-    0;
+    (progress?.get("sarah")?.timeline?.length ?? 0) > 0 &&
+    (progress?.get("lucy")?.timeline?.length ?? 0) > 0;
 
   return (
     <VisibilitySensor
@@ -31,7 +30,11 @@ const Route = () => {
           </h2>
         </header>
         <div className={styles.mapContainer}>
-          <Map characters={progress} drawRoute={isLoaded && isVisible} />
+          <Map
+            characters={progress}
+            isLoaded={isLoaded}
+            drawRoute={isLoaded && isVisible}
+          />
         </div>
       </Region>
     </VisibilitySensor>
