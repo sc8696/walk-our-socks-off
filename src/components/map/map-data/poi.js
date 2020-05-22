@@ -153,8 +153,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Guiting_Power",
               image: {
                 url: "place-images/Farmers_Arms_Guiting_Power_Stevage.jpeg",
+                title: "The Farmer's Arms pub",
                 description:
-                  "The Farmer's Arms, a pub in Guiting Power; the other pub is the Hollow Bottom.",
+                  "The Farmer's Arms, a pub in Guiting Power; the yellow stone Cotswold pub stands at the end of a quiet road lined with Cotswold cottages in this pretty village",
                 attribution:
                   "Steve Bennett (stevage) / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)"
               }
@@ -324,8 +325,9 @@ export default {
               image: {
                 url:
                   "place-images/Waytemore_Castle%2C_Bishop%27_s_Stortford_-_geograph.org.uk_-_1764727.jpg",
+                title: "Waytemore Castle",
                 description:
-                  "Waytemore Castle, Bishop' s Stortford This large earth mound is all that remains of the castle.",
+                  "Waytemore Castle, or the large grassy covered earth mound that is all that remains of the castle, it's very uniform, almost conical, in shape with a few trees growing on it's slopes",
                 attribution:
                   "PAUL FARMER / Waytemore Castle, Bishop&#039; s Stortford"
               }
