@@ -1,15 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 import { App } from "../../config/config";
 import Map from "../../components/map";
-import { ProgressContext } from "../../contexts/progress.provider";
+import { ProgressHook } from "../../hooks/progress.hook";
 import Region from "../../components/region";
 import VisibilitySensor from "react-visibility-sensor";
 import styles from "./route.module.scss";
 
 const Route = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { progress } = useContext(ProgressContext) || {};
+  const { progress } = ProgressHook();
 
   const isLoaded =
     (progress?.get("sarah")?.timeline?.length ?? 0) > 0 &&

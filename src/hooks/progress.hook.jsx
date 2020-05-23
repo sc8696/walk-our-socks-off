@@ -7,8 +7,7 @@ import characterList from "../consts/character-list";
 export const ProgressContext = React.createContext();
 const readerOptions = {
   sheetId: "198_edN0tHz5f7SZThERe-h0X3yN3j4aGTwNBuTIjIHw",
-  returnAllResults: false,
-  sheetNumber: 1
+  returnAllResults: false
 };
 
 const trimResults = ([...resultSet]) => {
@@ -31,11 +30,11 @@ const setCharacterProgress = (characterName, progress) => {
  * Sarah on Sheet 1
  * Lucy on Sheet 2
  */
-export const ProgressProvider = ({ children }) => {
+export const ProgressHook = () => {
   const [progress, setProgress] = useState(characterList);
 
   const getProgress = () => {
-    SheetReader(readerOptions, sarahResults => {
+    SheetReader({ ...readerOptions, sheetNumber: 1 }, sarahResults => {
       setCharacterProgress("sarah", trimResults(sarahResults));
       setProgress(new Map(characterList));
     });
@@ -49,13 +48,9 @@ export const ProgressProvider = ({ children }) => {
     getProgress();
   }, []);
 
-  return (
-    <ProgressContext.Provider value={{ progress }}>
-      {children}
-    </ProgressContext.Provider>
-  );
+  return { progress };
 };
 
-ProgressProvider.propTypes = {
+ProgressHook.propTypes = {
   children: PropTypes.any
 };

@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 import { App } from "../../config/config";
-import { ProgressContext } from "./../../contexts/progress.provider";
+import { ProgressHook } from "../../hooks/progress.hook";
 import ProgressMeter from "../../components/progress-meter";
 import Region from "../../components/region";
 import VisibilitySensor from "react-visibility-sensor";
@@ -9,7 +9,7 @@ import styles from "./progress.module.scss";
 
 const Progress = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { progress } = useContext(ProgressContext) || {};
+  const { progress } = ProgressHook();
 
   const isLoaded =
     (progress?.get("sarah")?.timeline?.length ?? 0) > 0 &&
