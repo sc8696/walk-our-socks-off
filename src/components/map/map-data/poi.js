@@ -16,8 +16,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Cheltenham",
               image: {
                 url: "place-images/Cheltenham_Municiapl_Offices.jpg",
+                title: "Cheltenham's Municipal Offices",
                 description:
-                  "Cheltenham's Municipal Offices, an example of Regency architecture",
+                  "Cheltenham's Municipal Offices, an example of Regency architecture. A four storey grand facade with column pillars lining it's white frontage and a covered archway walkway running along the front of the second floor. It has ornate flower beds outside and window boxes full of flowers on the first and second floors.",
                 attribution:
                   "Saffron Blaze / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)"
               }
@@ -31,7 +32,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Clacton-on-Sea",
               image: {
                 url: "place-images/Clacton-on-Sea_West-Beach.jpg",
-                description: "Sand of the West Beach in Clacton-on-Sea.",
+                title: "Sand of the West Beach",
+                description:
+                  "a long stretch of yellow sand along the West Beach and a kite surfer or two on the small grey waves of the sea",
                 attribution:
                   "By Romazur - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=34504026"
               }
@@ -345,8 +348,9 @@ export default {
               image: {
                 url:
                   "place-images/Doctors_Pond_in_Great_Dunmow_-_geograph.org.uk_-_1386029.jpg",
+                title: "Doctor's Pond",
                 description:
-                  " Doctors Pond in Great Dunmow It is thought that the doctors used to keep their supply of leeches in the doctors pond.",
+                  "Doctors Pond, where it is thought that the doctors used to keep their supply of leeches. The still pond shows the reflections of two or three large buildings on its banks.",
                 attribution:
                   "PAUL FARMER / CC BY-SA (https://creativecommons.org/licenses/by-sa/2.0)"
               }
@@ -364,8 +368,9 @@ export default {
               image: {
                 url:
                   "place-images/Braintree_Town_Hall_Centre%2C_Fairfield_Road%2C_Braintree_-_geograph.org.uk_-_59709.jpg",
+                title: "Braintree Town Hall Centre and Art Gallery",
                 description:
-                  "Braintree Town Hall Centre, Fairfield Road, Braintree. Given as a gift to the town by the Courtauld family, this Grade II* listed building with its rich wood-panelled interior, houses the Tourist Information Centre and Art Gallery.",
+                  "Braintree Town Hall Centre and Art Gallery, this Grade II listed building has a rich wood-panelled interior and red brick exterior with large sash windows houses in large white stone frames. On the top of the building is an ornate white bell tower, adorned with Coat of Arms on the side and a gold weather vane on top.",
                 attribution:
                   "Brenda Howard / Braintree Town Hall Centre, Fairfield Road, Braintree"
               }
@@ -382,8 +387,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Coggeshall",
               image: {
                 url: "place-images/Coggeshall_Sign.jpg",
+                title: "The town's sign",
                 description:
-                  "The town's sign depicts a Cistercian farming sheep at the abbey. On the other side is a weaver by his loom.",
+                  "The town's wooden carved sign depicting a Cistercian monk farming sheep at the abbey.",
                 attribution:
                   "AGGoH at the English language Wikipedia / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)"
               }
@@ -400,7 +406,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Colchester",
               image: {
                 url: "place-images/Colchester_Castle%2C_2016.jpg",
-                description: "Colchester Castle, completed c.1100 AD",
+                title: "Colchester Castle",
+                description:
+                  "Colchester Castle, square on one side and rounded at one end, it's brickwork, though eroding is made up of different shades of red, terracotta and white in difference shapes, it surface very uneven. It has a red tiled roof and Union Jack flag flying from it's turret.",
                 attribution:
                   "Alexis Ip / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
               }
@@ -418,7 +426,9 @@ export default {
               image: {
                 url:
                   "place-images/Ruins_of_St_Peter%27s_Church_-_geograph.org.uk_-_122735.jpg",
-                description: "Ruins of St Peter's Church",
+                title: "Ruins of St Peter's Church",
+                description:
+                  "Ruins of St Peter's Church, with no roof, just four walls showing the exterior structure of the church that now lies open to the elements.",
                 attribution:
                   "Roger W Haworth / CC BY-SA (https://creativecommons.org/licenses/by-sa/2.0)"
               }
@@ -435,7 +445,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Brightlingsea",
               image: {
                 url: "place-images/Brightlingsea_Harbour.jpg",
-                description: "A view of Brightlingsea harbour",
+                title: "Brightlingsea harbour",
+                description:
+                  "A view of Brightlingsea harbour, with brightly coloured boats, some sailing ships with tall masts, some tiny rowing boats and a small motor boat, and the driftwood remains of a former ship washed up in the low tide",
                 attribution:
                   "DavidDjJohnson at English Wikipedia / CC BY (https://creativecommons.org/licenses/by/3.0)"
               }
@@ -453,7 +465,9 @@ export default {
               image: {
                 url:
                   "place-images/The_Priory_in_St_Osyth_-_geograph.org.uk_-_8601.jpg",
-                description: "The Priory in St Osyth",
+                title: "The Priory in St Osyth",
+                description:
+                  "The Priory in St Osyth with its grand castle like facade",
                 attribution: "Stephen Dawson / The Priory in St Osyth"
               }
             },
@@ -469,7 +483,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Wivenhoe",
               image: {
                 url: "place-images/Wivenhoe_morning.jpg",
-                description: "View of Wivenhoe in the early morning",
+                title: "View of Wivenhoe in the early morning",
+                description:
+                  "Sailing ships moored along the jetties in front of the waterfront houses, including perhaps the little blue sail boats named 'Cressida' and 'Millie', on a calm day the blue sky and clouds reflecting in the water",
                 attribution:
                   "Alexis Ip / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
               }
@@ -486,7 +502,9 @@ export default {
               link: "https://en.wikipedia.org/wiki/Colchester",
               image: {
                 url: "place-images/Colchester_Castle%2C_2016.jpg",
-                description: "Colchester Castle, completed c.1100 AD",
+                title: "Colchester Castle",
+                description:
+                  "Colchester Castle, square on one side and rounded at one end, it's brickwork, though eroding is made up of different shades of red, terracotta and white in difference shapes, it surface very uneven. It has a red tiled roof and Union Jack flag flying from it's turret.",
                 attribution:
                   "Alexis Ip / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)"
               }
