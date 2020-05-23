@@ -50,7 +50,7 @@ const setupMap = element => {
 };
 
 const getEndpointDescription = (person, endPlace) => {
-  if (person.distanceToTravel == 0) {
+  if (person.distanceToTravel === 0) {
     return (
       <>
         {person.name} has completed her virtual journey to{" "}

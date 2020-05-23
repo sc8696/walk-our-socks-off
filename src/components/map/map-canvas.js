@@ -1,22 +1,31 @@
-import { along, lineString } from "@turf/turf";
+import { along, length, lineString } from "@turf/turf";
 
 import mapboxgl from "mapbox-gl";
+
 import { noop } from "lodash";
+
 import { renderToString } from "react-dom/server";
 
-function precalcAnimationSteps(route, routeLength, stepDistance) {
+function precalcAnimationSteps(
+  route,
+  routeLength,
+  distanceTravelled,
+  stepDistance
+) {
   let travelled = 0;
   const frames = [
     along(route, 0, {
       units: "kilometers"
     })
   ];
-  while ((travelled += stepDistance) < routeLength) {
-    frames.push(
-      along(route, travelled, {
-        units: "kilometers"
-      })
-    );
+  while ((travelled += stepDistance) < distanceTravelled) {
+    if (travelled < routeLength) {
+      frames.push(
+        along(route, travelled, {
+          units: "kilometers"
+        })
+      );
+    }
   }
   return frames;
 }
@@ -99,6 +108,7 @@ export class MapCanvas {
   ) {
     this.map = map;
     this.route = route;
+    this.routeLength = length(route);
     this.reversedRoute = {
       ...this.route,
       coordinates: [...this.route.coordinates].reverse()
@@ -216,11 +226,13 @@ export class MapCanvas {
     }
     const characterOneRouteFrames = precalcAnimationSteps(
       this.route,
+      this.routeLength,
       this.characterOne.distanceTravelled,
       stepDistance
     );
     const characterTwoRouteFrames = precalcAnimationSteps(
       this.reversedRoute,
+      this.routeLength,
       this.characterTwo.distanceTravelled,
       stepDistance
     );
