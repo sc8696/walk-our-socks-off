@@ -50,6 +50,18 @@ const setupMap = element => {
 };
 
 const getEndpointDescription = (person, endPlace) => {
+  if (person.distanceToTravel == 0) {
+    return (
+      <>
+        {person.name} has completed her virtual journey to{" "}
+        <Link href={endPlace.properties.link}>
+          {endPlace.properties.placeName}
+        </Link>
+        , 250 kilometres from her start point in {person.home}
+      </>
+    );
+  }
+
   return (
     <>
       On her virtual journey {person.name} would now be near{" "}
