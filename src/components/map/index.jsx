@@ -190,7 +190,7 @@ const Map = React.memo(({ characters, isLoaded, drawRoute }) => {
               closeOnClick: false,
               offset: 30,
               className: styles.endPointPopup,
-              anchor: "top"
+              anchor: "top-right"
             }).setHTML(renderToString(characterOneEndPointPopup));
             characterOneMarker.setPopup(popup);
             popup.addTo(map);
